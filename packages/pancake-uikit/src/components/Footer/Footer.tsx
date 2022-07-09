@@ -71,11 +71,6 @@ const MenuItem: React.FC<FooterProps> = ({
                   />
                 </Col>
               </Row>
-              <Row justifyContent="space-between">
-                <Col>
-                  <CustomLink href="https://old-dapp.livetrade.io" target="_blank">Old DApp</CustomLink>
-                </Col>
-              </Row>
           </ContainerFooter>
           <Flex justifyContent="space-between" alignItems="center">
               <CakePrice cakePriceUsd={cakePriceUsd} color="textSubtle" />
