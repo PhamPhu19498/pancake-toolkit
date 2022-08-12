@@ -52,7 +52,7 @@ const MenuItem: React.FC<FooterProps> = ({
         </CustomFlex>
         
 
-        <StyledToolsContainer
+        {/* <StyledToolsContainer
           order={[1, null, 3]}
           justifyContent="space-between"
         >
@@ -75,7 +75,7 @@ const MenuItem: React.FC<FooterProps> = ({
           <Flex justifyContent="space-between" alignItems="center">
               <CakePrice cakePriceUsd={cakePriceUsd} color="textSubtle" />
           </Flex>
-        </StyledToolsContainer>
+        </StyledToolsContainer> */}
       </Flex>
     </StyledFooter>
   );

@@ -116,19 +116,19 @@ export const socials = [
 export const MoreInformation = [
   {
     label: "Whitepaper",
-    href: "https://ltd.livetrade.io/wp-content/uploads/2021/07/LTD-Whitepaper_Eng.pdf",
+    href: "https://whitepaper.runtogether.net/about-run-together/general",
   },
   {
     label: "Docs",
-    href: "https://docs.livetrade.io/",
+    href: "https://docsend.com/view/rf3ygdnx67sqxe6d",
   },
   {
     label: "Smart Contract",
-    href: "https://bscscan.com/token/0xDbad544416Df0677254645422bB560AF8408cAe7",
+    href: "https://bscscan.com/address/0xc643E83587818202E0fFf5eD96D10Abbc8Bb48e7",
   },
   {
     label: "Audits",
-    href: "https://github.com/verichains/public-audit-reports/blob/main/Verichains%20Pulbic%20Audit%20Report%20-%20LiveTrade%20Token%20and%20Treasury%20-%20v1.1.pdf",
+    href: "https://github.com/verichains/public-audit-reports/blob/main/Verichains%20Public%20Audit%20Report%20-%20RunTogether%20Token%20v2%20-%20v1.0.pdf",
   },
 ]
 
