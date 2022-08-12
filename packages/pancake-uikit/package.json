@@ -1,6 +1,6 @@
 {
   "name": "@phamphu19498/runuikit-uikit",
-  "version": "1.65.8",
+  "version": "1.66.1",
   "description": "Set of UI components for pancake projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
