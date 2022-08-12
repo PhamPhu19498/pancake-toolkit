@@ -31,6 +31,14 @@ const StyledNav = styled.nav`
   transform: translate3d(0, 0, 0);
 
   padding: 50px 160px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 50px 40px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 50px 10px;
+  }
 `;
 
 const FixedContainer = styled.div<{ showMenu: boolean; height: number }>`
@@ -57,13 +65,17 @@ const BodyWrapper = styled(Box)`
 
 const ContainerNav = styled(Flex)`
   gap: 20px;
-`
+`;
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
+`;
+
+const BtnContainer = styled(Flex)`
+  gap: 10px;
 `;
 
 const Menu: React.FC<NavProps> = ({
@@ -86,7 +98,7 @@ const Menu: React.FC<NavProps> = ({
   children,
 }) => {
   const { isMobile } = useMatchBreakpoints();
-  const [windowSize, setWindowSize] = useState(window.innerWidth)
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(typeof window === "undefined" ? 0 : window.pageYOffset);
 
@@ -95,14 +107,14 @@ const Menu: React.FC<NavProps> = ({
   const totalTopMenuHeight = banner ? MENU_HEIGHT + topBannerHeight : MENU_HEIGHT;
 
   useEffect(() => {
-      const handleResize = () => {
-          setWindowSize(window.innerWidth)
-      }
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
 
-      window.addEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize);
 
-      return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -147,12 +159,14 @@ const Menu: React.FC<NavProps> = ({
           <StyledNav>
             <ContainerNav>
               <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-              {windowSize> 840 && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="12px" />}
+              {windowSize > 840 && (
+                <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="12px" />
+              )}
             </ContainerNav>
-            <Flex alignItems="center" height="100%">
+            <BtnContainer alignItems="center" height="100%">
               {userMenu}
-              {globalMenu} 
-            </Flex>
+              {globalMenu}
+            </BtnContainer>
           </StyledNav>
         </FixedContainer>
         {subLinks && (
@@ -185,7 +199,7 @@ const Menu: React.FC<NavProps> = ({
             />
           </Inner>
         </BodyWrapper>
-        {windowSize<= 840 && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
+        {windowSize <= 840 && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
       </Wrapper>
     </MenuContext.Provider>
   );

@@ -19,6 +19,7 @@ import { links, userMenulinks } from "./config";
 import Menu from "./Menu";
 import { Language, NavProps } from "./types";
 import BottomDrawer from "../../components/BottomDrawer/BottomDrawer";
+import { CustomButton } from './styles'
 
 export default {
   title: "Widgets/Menu",
@@ -62,9 +63,9 @@ const GlobalMenuComponent: React.FC = () => {
 
   return (
     <Flex>
-      <IconButton onClick={onPresent1} variant="text" scale="sm" mr="4px">
-        <LanguageCurrencyIcon height={22} width={22} color="textSubtle" />
-      </IconButton>
+      <CustomButton onClick={onPresent1} variant="text" scale="sm" mr="4px">
+        Sign in
+      </CustomButton>
     </Flex>
   );
 };

@@ -16,7 +16,16 @@ const blink = keyframes`
 
 const ContainerLogo = styled(Flex)`
   padding-right: 60px;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #e6e8ec;
+
+  @media screen and (max-width: 600px) {
+    padding-right: 20px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding-right: 10px;
+    border-right: none;
+  }
 `;
 
 const StyledLink = styled("a")`

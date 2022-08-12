@@ -9,6 +9,10 @@ import { MenuItemsProps } from "./types";
 
 const MenuItemsContainer = styled(Flex)`
   gap: 40px;
+  
+  @media screen and (max-width: 1024px) {
+    gap: 10px;
+  }
 `;
 
 const MenuItems: React.FC<MenuItemsProps> = ({ items = [], activeItem, activeSubItem, ...props }) => {
