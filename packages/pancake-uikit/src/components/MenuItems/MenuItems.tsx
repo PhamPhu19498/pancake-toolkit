@@ -8,8 +8,8 @@ import IconComponent from "../Svg/IconComponent";
 import { MenuItemsProps } from "./types";
 
 const MenuItemsContainer = styled(Flex)`
-
-`
+  gap: 40px;
+`;
 
 const MenuItems: React.FC<MenuItemsProps> = ({ items = [], activeItem, activeSubItem, ...props }) => {
   return (

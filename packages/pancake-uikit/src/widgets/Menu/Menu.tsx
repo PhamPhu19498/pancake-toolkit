@@ -56,7 +56,7 @@ const BodyWrapper = styled(Box)`
 `;
 
 const ContainerNav = styled(Flex)`
-  
+  gap: 20px;
 `
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
