@@ -79,22 +79,22 @@ export const socials = [
   {
     label: "Globe",
     icon: "Globe",
-    href: "https://ltd.livetrade.io/",
+    href: "https://runtogether.net/",
   },
   {
     label: "Facebook",
     icon: "Facebook",
-    href: "https://www.facebook.com/livetrade.io",
+    href: "https://www.facebook.com/Runtogether.official",
   },
   {
     label: "Twitter",
     icon: "Twitter",
-    href: "https://twitter.com/Livetrade_io",
+    href: "https://twitter.com/RunTogether_Nft",
   },
   {
     label: "Telegram",
     icon: "Telegram",
-    href: "https://t.me/LiveTradeLTD",
+    href: "https://t.me/Runtogethergroup?fbclid=IwAR2k6m9kmLrf6BrKbFUWZp4giAhuRAqbOT6xTDprNeBndRkT2d-Er3bd8VU",
   },
   // {
   //   label: "GitLab",
