@@ -8,28 +8,51 @@ import { ModalProps } from "./types";
 
 export const ModalHeader = styled.div<{ background?: string }>`
   align-items: center;
-  background: ${({ theme }) => theme.colors.modalHeader};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   display: flex;
   padding: 12px 24px;
+  /* position: relative; */
 `;
 
 export const ModalTitle = styled(Flex)`
   align-items: center;
   flex: 1;
+  justify-content: center;
+  color: #23262f;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  gap: 10px;
 `;
 
 export const ModalBody = styled(Flex)`
   flex-direction: column;
   max-height: 90vh;
   overflow-y: auto;
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+`;
+
+export const WrapIconButton = styled(IconButton)`
+  position: absolute;
+  top: -20px;
+  right: -70px;
+  background: black;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+
+  svg {
+    fill: #fff;
+    width: 25px;
+  }
 `;
 
 export const ModalCloseButton: React.FC<{ onDismiss: ModalProps["onDismiss"] }> = ({ onDismiss }) => {
   return (
-    <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
+    <WrapIconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
       <CloseIcon color="text" />
-    </IconButton>
+    </WrapIconButton>
   );
 };
 
@@ -42,11 +65,12 @@ export const ModalBackButton: React.FC<{ onBack: ModalProps["onBack"] }> = ({ on
 };
 
 export const ModalContainer = styled(Box)<{ minWidth: string }>`
+  position: relative;
   overflow: hidden;
   background: ${({ theme }) => theme.modal.background};
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 5px;
+  border-radius: 20px;
   width: 100%;
   max-height: 100vh;
   z-index: ${({ theme }) => theme.zIndices.modal};
@@ -56,4 +80,6 @@ export const ModalContainer = styled(Box)<{ minWidth: string }>`
     min-width: ${({ minWidth }) => minWidth};
     max-width: 100%;
   }
+
+  padding: 25px 80px;
 `;

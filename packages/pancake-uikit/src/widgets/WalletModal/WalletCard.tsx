@@ -6,6 +6,8 @@ import MoreHorizontal from "../../components/Svg/Icons/MoreHorizontal";
 import { ButtonProps } from "../../components/Button";
 import { connectorLocalStorageKey, walletLocalStorageKey } from "./config";
 import { Login, Config, ConnectorNames } from "./types";
+import { TransferLink } from "./styles";
+import { ChevronDownIcon } from "../../components/Svg";
 
 interface Props {
   walletConfig: Config;
@@ -13,14 +15,32 @@ interface Props {
   onDismiss: () => void;
 }
 
-const WalletButton = styled(Button).attrs({ width: "100%", variant: "text", py: "16px" })`
+const WalletButton = styled(Button).attrs({ width: "100%", variant: "text" })`
   align-items: center;
   display: flex;
-  flex-direction: column;
   height: auto;
-  justify-content: center;
+  justify-content: flex-start;
   margin-left: auto;
   margin-right: auto;
+  gap: 20px;
+  border: 1px solid #e7e7e1;
+  border-radius: 12px;
+  padding: 10px 17px;
+
+  &:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+    background: #E45F35;
+    opacity: 1;
+  }
+`;
+
+const WalletButtonShowMore = styled(WalletButton)`
+  border: none;
+  padding: 0px 17px;
+   
+  &:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+    background: transparent;
+    opacity: 1;
+  }
 `;
 
 interface MoreWalletCardProps extends ButtonProps {
@@ -29,10 +49,10 @@ interface MoreWalletCardProps extends ButtonProps {
 
 export const MoreWalletCard: React.FC<MoreWalletCardProps> = ({ t, ...props }) => {
   return (
-    <WalletButton variant="tertiary" {...props}>
-      <MoreHorizontal width="40px" mb="8px" color="textSubtle" />
-      <Text fontSize="14px">{t("More")}</Text>
-    </WalletButton>
+    <WalletButtonShowMore variant="tertiary" {...props}>
+      <TransferLink>{t("More")}</TransferLink>
+      <ChevronDownIcon color="#FF592C" width="24px" />
+    </WalletButtonShowMore>
   );
 };
 

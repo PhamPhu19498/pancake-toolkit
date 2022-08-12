@@ -7,10 +7,10 @@ export const StyledFooter = styled(Flex)`
   background: ${({ theme }) => theme.colors.background};
   @media only screen and (max-width: 600px) {
     margin-bottom: 0px !important;
-    padding-top:20px !important;
-    padding-bottom:20px !important;
-    padding-left:10px;
-    padding-right:10px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 `;
 
@@ -21,7 +21,6 @@ export const StyledList = styled.ul`
   ${({ theme }) => theme.mediaQueries.md} {
     margin-bottom: 0px;
   }
- 
 `;
 
 export const StyledListItem = styled.li`
@@ -60,56 +59,61 @@ export const StyledText = styled.span`
   color: ${darkColors.text};
 `;
 export const CustomFlex = styled(Flex)`
-  width:100%;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:1rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
   }
-`
+`;
 export const CustomLink = styled.a`
   color: ${({ theme }) => theme.colors.textSubtle};
-`
+`;
 export const ContainerMoreInformation = styled(Flex)`
   width: 338px;
-  justify-content:space-between;
+  justify-content: space-between;
   @media only screen and (max-width: 600px) {
-    width:100%;
-    justify-content:space-between;
-    margin-bottom:1rem;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
   }
-`
+`;
 export const ContainerFooter = styled(Flex)`
   width: 338px;
-  justify-content:space-between;
-  align-items:center;
+  justify-content: space-between;
+  align-items: center;
   @media only screen and (max-width: 600px) {
-    width:100%;
-    align-items:flex-start;
-    justify-content:center;
-    flex-direction:column;
-    flex-wrap:wrap;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
-`
+`;
 export const Col = styled(Flex)`
   width: 50%;
   @media only screen and (max-width: 600px) {
-    width:100%;
-    margin-bottom:8px;
+    width: 100%;
+    margin-bottom: 8px;
   }
   > button {
-    padding-left:0px !important;
-    padding-right:0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
-`
+`;
 export const Row = styled(Flex)`
   width: 50%;
-  align-items:center;
+  align-items: center;
   @media only screen and (max-width: 600px) {
-    width:100%;
+    width: 100%;
   }
-`
+`;
 
+export const SwapHeadFooter = styled(Flex)`
+  flex-direction: column;
+`;
+
+export const Text = styled.div``;

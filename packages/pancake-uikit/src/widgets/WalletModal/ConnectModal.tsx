@@ -11,6 +11,8 @@ import { ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalTitle } 
 import WalletCard, { MoreWalletCard } from "./WalletCard";
 import config, { walletLocalStorageKey } from "./config";
 import { Config, Login } from "./types";
+import { ContainerBtn, TransferLink } from "./styles";
+import { Flex } from "../../components/Box";
 
 interface Props {
   login: Login;
@@ -20,7 +22,7 @@ interface Props {
 }
 
 const WalletWrapper = styled(Box)`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  /* border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder}; */
 `;
 
 /**
@@ -49,7 +51,7 @@ const getPreferredConfig = (walletConfig: Config[]) => {
   ];
 };
 
-const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayCount = 3, t }) => {
+const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayCount = 4, t }) => {
   const [showMore, setShowMore] = useState(false);
   const theme = useTheme();
   const sortedConfig = getPreferredConfig(config);
@@ -58,35 +60,27 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
   return (
     <ModalContainer minWidth="320px">
       <ModalHeader background={getThemeValue("colors.gradients.bubblegum")(theme)}>
-        <ModalTitle>
-          <Heading>{t("Connect Wallet")}</Heading>
+        <ModalTitle flexDirection='column'>
+          <Heading fontSize="24px">{t("Connect Wallet")}</Heading>
+          <Text color='#B5B5BE' fontSize="14px" fontWeight='400'>Connect to your wallet</Text>
         </ModalTitle>
         <ModalCloseButton onDismiss={onDismiss} />
       </ModalHeader>
       <ModalBody width={["320px", null, "340px"]}>
         <WalletWrapper py="24px" maxHeight="453px" overflowY="auto">
-          <Grid gridTemplateColumns="1fr 1fr">
+          <ContainerBtn gridTemplateColumns="1fr">
             {displayListConfig.map((wallet) => (
               <Box key={wallet.title}>
                 <WalletCard walletConfig={wallet} login={login} onDismiss={onDismiss} />
               </Box>
             ))}
-            {!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}
-          </Grid>
+          </ContainerBtn>
         </WalletWrapper>
-        <Box p="24px">
-          <Text textAlign="center" color="textSubtle" as="p" mb="16px">
-            {t("Haven’t got a crypto wallet yet?")}
-          </Text>
-          <Button
-            as="a"
-            href="https://docs.pancakeswap.finance/get-started/connection-guide"
-            variant="subtle"
-            width="100%"
-            {...getExternalLinkProps()}
-          >
-            {t("Learn How to Connect")}
-          </Button>
+        <Box>
+          <Flex justifyContent='space-between'>
+            <TransferLink>{!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}</TransferLink>
+            <TransferLink href="https://www.investopedia.com/terms/b/blockchain-wallet.asp" target="_blank">What is a wallet?</TransferLink>
+          </Flex>
         </Box>
       </ModalBody>
     </ModalContainer>
