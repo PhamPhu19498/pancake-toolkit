@@ -14,6 +14,11 @@ const blink = keyframes`
   50% { transform:  scaleY(0.1); }
 `;
 
+const ContainerLogo = styled(Flex)`
+  padding-right: 60px;
+  border-right: 1px solid #ccc;
+`;
+
 const StyledLink = styled("a")`
   display: flex;
   align-items: center;
@@ -53,7 +58,7 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   );
 
   return (
-    <Flex>
+    <ContainerLogo>
       {isAbsoluteUrl ? (
         <StyledLink as="a" href={href} aria-label="Home">
           {innerLogo}
@@ -63,7 +68,7 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
-    </Flex>
+    </ContainerLogo>
   );
 };
 

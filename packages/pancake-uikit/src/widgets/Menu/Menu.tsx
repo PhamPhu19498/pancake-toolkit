@@ -30,8 +30,7 @@ const StyledNav = styled.nav`
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   transform: translate3d(0, 0, 0);
 
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 50px 160px;
 `;
 
 const FixedContainer = styled.div<{ showMenu: boolean; height: number }>`
@@ -55,6 +54,10 @@ const BodyWrapper = styled(Box)`
   position: relative;
   display: flex;
 `;
+
+const ContainerNav = styled(Flex)`
+  gap: 20px;
+`
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
@@ -142,10 +145,10 @@ const Menu: React.FC<NavProps> = ({
         <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
           {banner && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
           <StyledNav>
-            <Flex>
+            <ContainerNav>
               <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
               {windowSize> 840 && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="12px" />}
-            </Flex>
+            </ContainerNav>
             <Flex alignItems="center" height="100%">
               {/* {!isMobile && (
                 <Box mr="12px">
@@ -162,7 +165,8 @@ const Menu: React.FC<NavProps> = ({
                   hideLanguage
                 />
               </Box>
-              {globalMenu} {userMenu}
+              {userMenu}
+              {globalMenu} 
             </Flex>
           </StyledNav>
         </FixedContainer>
