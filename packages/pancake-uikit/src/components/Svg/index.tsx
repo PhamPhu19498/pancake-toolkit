@@ -155,6 +155,7 @@ export { default as DipoIcon } from "./Icons/Dipo";
 export { default as MartketpalceIcon } from "./Icons/Martketpalce";
 export { default as ExchangeIcon } from "./Icons/Exchange";
 export { default as GitLabIcon } from "./Icons/GitLab";
+export { default as RunLogoIcon } from "./Icons/RunLogoIcon";
 
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";

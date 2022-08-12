@@ -30,8 +30,7 @@ const StyledNav = styled.nav`
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   transform: translate3d(0, 0, 0);
 
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 160px;
 `;
 
 const FixedContainer = styled.div<{ showMenu: boolean; height: number }>`

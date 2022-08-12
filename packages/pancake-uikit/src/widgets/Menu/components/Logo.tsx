@@ -17,17 +17,18 @@ const blink = keyframes`
 const StyledLink = styled("a")`
   display: flex;
   align-items: center;
-  .mobile-icon {
-    width: 32px;
-    ${({ theme }) => theme.mediaQueries.nav} {
-      display: none;
-    }
-  }
-  .desktop-icon {
+  /* .mobile-icon {
     width: 160px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      width: 32px;
+    }
+  } */
+  .desktop-icon {
+    width: 160px !important;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
+      width: 60px !important;
     }
   }
   .eye {
@@ -48,7 +49,7 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" />
+      {/* <LogoIcon className="mobile-icon" /> */}
       <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
     </>
   );
