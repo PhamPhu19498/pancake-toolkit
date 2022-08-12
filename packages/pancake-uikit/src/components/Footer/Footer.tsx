@@ -73,7 +73,7 @@ const MenuItem: React.FC<FooterProps> = ({
               </Row>
               <Row justifyContent="space-between">
                 <Col>
-                  <CustomLink href="https://old-dapp.livetrade.io" target="_blank">Old DApp</CustomLink>
+                  <CustomLink href="https://old-dapp.livetrade.io" target="_blank">News DApp</CustomLink>
                 </Col>
               </Row>
           </ContainerFooter>
