@@ -1,6 +1,6 @@
 {
-  "name": "@baont0209/runtogether-uikit",
-  "version": "1.65.18",
+  "name": "@phamphu19498/runuikit-uikit",
+  "version": "1.65.8",
   "description": "Set of UI components for pancake projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

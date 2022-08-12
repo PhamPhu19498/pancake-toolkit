@@ -163,11 +163,7 @@ const Menu: React.FC<NavProps> = ({
                 <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="12px" />
               )}
             </ContainerNav>
-            <BtnContainer alignItems="center" height="100%">
-              {userMenu}
-              {globalMenu}
-            </BtnContainer>
-          </StyledNav>
+            </StyledNav>
         </FixedContainer>
         {subLinks && (
           <Flex justifyContent="space-around">
