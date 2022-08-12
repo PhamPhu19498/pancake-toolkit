@@ -59,15 +59,11 @@ const GlobalMenuModal: React.FC<ModalProps> = ({ title, onDismiss, ...props }) =
 
 const GlobalMenuComponent: React.FC = () => {
   const [onPresent1] = useModal(<GlobalMenuModal title="Display Settings Modal" />);
-  const [onPresent2] = useModal(<GlobalMenuModal title="Global Settings Modal" />);
 
   return (
     <Flex>
       <IconButton onClick={onPresent1} variant="text" scale="sm" mr="4px">
         <LanguageCurrencyIcon height={22} width={22} color="textSubtle" />
-      </IconButton>
-      <IconButton onClick={onPresent2} variant="text" scale="sm" mr="8px">
-        <CogIcon height={22} width={22} color="textSubtle" />
       </IconButton>
     </Flex>
   );
