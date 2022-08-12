@@ -26,8 +26,8 @@ export const ModalTitle = styled(Flex)`
 
 export const ModalBody = styled(Flex)`
   flex-direction: column;
-  max-height: 90vh;
-  overflow-y: auto;
+  max-height: 70vh;
+  /* overflow-y: auto; */
   &::-webkit-scrollbar-thumb {
     display: none;
   }
@@ -35,8 +35,8 @@ export const ModalBody = styled(Flex)`
 
 export const WrapIconButton = styled(IconButton)`
   position: absolute;
-  top: -20px;
-  right: -70px;
+  top: 15px;
+  right: 15px;
   background: black;
   border-radius: 50%;
   height: 40px;
@@ -81,5 +81,16 @@ export const ModalContainer = styled(Box)<{ minWidth: string }>`
     max-width: 100%;
   }
 
-  padding: 25px 80px;
+  padding: 60px 80px 50px 80px;
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 40px 50px 40px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 12px 20px 20px 20px;
+  }
+  @media screen and (max-width: 320px) {
+    padding: 10px 10px 25px 10px;
+  }
 `;
