@@ -20,7 +20,7 @@ export const status = {
 
 export const links: MenuItemsType[] = [
   {
-    label: 'Trade',
+    label: 'Market',
     icon: 'Swap',
     href: '/swap',
     showItemsOnMobile: true,
