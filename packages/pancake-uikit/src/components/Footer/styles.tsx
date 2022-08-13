@@ -63,6 +63,8 @@ export const CustomFlex = styled(Flex)`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 20% 35% 45%;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
     justify-content: center;
@@ -71,10 +73,25 @@ export const CustomFlex = styled(Flex)`
 `;
 export const CustomLink = styled.a`
   color: ${({ theme }) => theme.colors.textSubtle};
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
-export const ContainerMoreInformation = styled(Flex)`
+export const ContainerMoreInformationLeft = styled(Flex)`
   width: 338px;
-  justify-content: space-between;
+  gap: 10px;
+  flex-direction: column;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+`;
+export const ContainerMoreInformationRight = styled(Flex)`
+  width: 338px;
+  gap: 10px;
+  flex-direction: column;
   @media only screen and (max-width: 600px) {
     width: 100%;
     justify-content: space-between;
@@ -116,4 +133,24 @@ export const SwapHeadFooter = styled(Flex)`
   flex-direction: column;
 `;
 
+export const WrapSocials = styled(Flex)`
+  gap: 20px;
+`;
+
 export const Text = styled.div``;
+
+export const HeadTitle = styled.div`
+  color: #000;
+  font-weight: bold;
+`;
+
+export const WrapBtnDowload = styled(Flex)``;
+
+export const BtnGGPlay = styled.div``;
+
+export const BtnAppStore = styled.div``;
+
+
+export const ContainerDownload = styled(Flex)`
+  gap: 15px;
+`

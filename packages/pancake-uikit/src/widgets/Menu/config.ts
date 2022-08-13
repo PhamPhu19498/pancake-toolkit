@@ -20,7 +20,7 @@ export const status = {
 
 export const links: MenuItemsType[] = [
   {
-    label: 'Trade',
+    label: 'Marketplace',
     icon: 'Swap',
     href: '/swap',
     showItemsOnMobile: true,
@@ -36,7 +36,7 @@ export const links: MenuItemsType[] = [
     ],
   },
   {
-    label: 'Earn',
+    label: 'Inventory',
     href: '/farms',
     icon: 'Earn',
     items: [
@@ -51,7 +51,7 @@ export const links: MenuItemsType[] = [
     ],
   },
   {
-    label: 'Membership',
+    label: 'My Balance',
     icon: 'Membership',
     href: '/membership',
     showItemsOnMobile:true,
@@ -63,7 +63,7 @@ export const links: MenuItemsType[] = [
     ]
   },
   {
-    label: 'DIPO ®',
+    label: 'Account',
     icon: 'Dipo',
     href: '/dipo/live',
     showItemsOnMobile:true,
@@ -75,7 +75,22 @@ export const links: MenuItemsType[] = [
     ]
   },
   {
-    label: 'More',
+    label: 'Referral',
+    icon: 'More',
+    href: '/repo',
+    items: [
+      {
+        label: 'Repo',
+        href: '/repo',
+      },
+      {
+        label: 'Marketplace',
+        href: '/nftmarketplace',
+      },
+    ]
+  },
+  {
+    label: 'Cart',
     icon: 'More',
     href: '/repo',
     items: [

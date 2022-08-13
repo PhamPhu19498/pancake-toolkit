@@ -8,7 +8,6 @@ import IconComponent from "../Svg/IconComponent";
 import { MenuItemsProps } from "./types";
 
 const MenuItemsContainer = styled(Flex)`
-  gap: 40px;
   
   @media screen and (max-width: 1024px) {
     gap: 10px;

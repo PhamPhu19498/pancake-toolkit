@@ -14,15 +14,25 @@ import {
   CustomLink,
   ContainerMoreInformation,
   ContainerFooter,
-  Col, Row
+  Col,
+  Row,
+  Text,
+  WrapSocials,
+  HeadTitle,
+  WrapBtnDowload,
+  BtnGGPlay,
+  BtnAppStore,
+  ContainerMoreInformationLeft,
+  ContainerMoreInformationRight,
+  ContainerDownload,
 } from "./styles";
-import { MoreInformation } from "./config"
+import { MoreInformationLeft, MoreInformationRight } from "./config";
 import SocialLinks from "./Components/SocialLinks";
 import { FooterProps } from "./types";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import LangSelector from "../LangSelector/LangSelector";
 import CakePrice from "../CakePrice/CakePrice";
-import { LogoWithTextIcon, ArrowForwardIcon } from "../Svg";
+import { LogoWithTextIcon, ArrowForwardIcon, LogoFooter, GgPlayIcon, AppStoreIcon } from "../Svg";
 import { Button } from "../Button";
 import { Colors } from "../..";
 
@@ -41,16 +51,48 @@ const MenuItem: React.FC<FooterProps> = ({
     <StyledFooter p={["40px 6px", null, "56px 40px 32px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <CustomFlex>
-            <ContainerMoreInformation>
-              {MoreInformation.map((items) => {
+          <WrapSocials flexDirection="column">
+            <Flex>
+              <LogoFooter />
+            </Flex>
+            <Text>Theo dõi chúng tôi tại</Text>
+            <SocialLinks order={[2]} />
+          </WrapSocials>
+
+          <Flex>
+            <ContainerMoreInformationLeft>
+              {MoreInformationLeft.map((items) => {
                 return (
-                  <CustomLink href={items.href} target="_blank">{items.label}</CustomLink>
+                  <CustomLink href={items.href} target="_blank">
+                    {items.label}
+                  </CustomLink>
                 );
               })}
-            </ContainerMoreInformation>
-            <SocialLinks order={[2]}/>
+            </ContainerMoreInformationLeft>
+            <ContainerMoreInformationRight>
+              {MoreInformationRight.map((items) => {
+                return (
+                  <CustomLink href={items.href} target="_blank">
+                    {items.label}
+                  </CustomLink>
+                );
+              })}
+            </ContainerMoreInformationRight>
+          </Flex>
+          <ContainerDownload flexDirection="column">
+            <HeadTitle>Liên Hệ</HeadTitle>
+            <Text>hello@runtogether.net</Text>
+
+            <WrapBtnDowload>
+              <BtnGGPlay>
+                <GgPlayIcon />
+              </BtnGGPlay>
+              <BtnAppStore>
+                <AppStoreIcon />
+              </BtnAppStore>
+            </WrapBtnDowload>
+          </ContainerDownload>
         </CustomFlex>
-        
 
         {/* <StyledToolsContainer
           order={[1, null, 3]}

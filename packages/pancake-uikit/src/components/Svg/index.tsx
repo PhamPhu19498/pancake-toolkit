@@ -157,6 +157,9 @@ export { default as ExchangeIcon } from "./Icons/Exchange";
 export { default as GitLabIcon } from "./Icons/GitLab";
 export { default as LogoRunIcon } from "./Icons/LogoRun";
 export { default as LogoFooter } from "./Icons/LogoFooter";
+export { default as TiktokIcon } from "./Icons/Tiktok";
+export { default as GgPlayIcon } from "./Icons/GgPlayIcon";
+export { default as AppStoreIcon } from "./Icons/AppStoreIcon";
 
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";

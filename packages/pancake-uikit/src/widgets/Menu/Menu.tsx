@@ -78,6 +78,10 @@ const BtnContainer = styled(Flex)`
   gap: 10px;
 `;
 
+const CustomFlex = styled(Flex)`
+  gap: 10px;
+`
+
 const Menu: React.FC<NavProps> = ({
   linkComponent = "a",
   userMenu,
@@ -163,7 +167,7 @@ const Menu: React.FC<NavProps> = ({
                 <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="12px" />
               )}
             </ContainerNav>
-            <Flex alignItems="center" height="100%">
+            <CustomFlex alignItems="center" height="100%">
               {!isMobile && (
                 <Box mr="12px">
                   <CakePrice cakePriceUsd={cakePriceUsd} />
@@ -179,8 +183,9 @@ const Menu: React.FC<NavProps> = ({
                   hideLanguage
                 />
               </Box>
-              {globalMenu} {userMenu}
-            </Flex>
+              {userMenu}
+              {globalMenu} 
+            </CustomFlex>
           </StyledNav>
         </FixedContainer>
         {subLinks && (
