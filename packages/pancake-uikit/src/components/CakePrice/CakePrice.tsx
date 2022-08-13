@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import LogoRound from "../Svg/Icons/LogoRound";
+import LogoRun from "../Svg/Icons/LogoRun";
 import Text from "../Text/Text";
 import Skeleton from "../Skeleton/Skeleton";
 import { Colors } from "../../theme";
@@ -27,8 +27,8 @@ const PriceLink = styled.a`
 const CakePrice: React.FC<Props> = ({ cakePriceUsd, color = "textSubtle" }) => {
   return cakePriceUsd ? (
     <Flex alignItems="center">
-      <LogoRound width="24px" mr="8px" />
-      <Text color={color} bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+      <LogoRun />
+      <Text ml="8px" color={color} bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
     </Flex>
   ) : (
     <Skeleton width={80} height={24} />
