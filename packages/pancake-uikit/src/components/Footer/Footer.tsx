@@ -1,40 +1,20 @@
 import React from "react";
-import { baseColors, darkColors, lightColors } from "../../theme/colors";
-import { Flex, Box } from "../Box";
-import { Link } from "../Link";
+import { Flex } from "../Box";
 import {
   StyledFooter,
-  StyledIconMobileContainer,
-  StyledList,
-  StyledListItem,
-  StyledText,
-  StyledSocialLinks,
-  StyledToolsContainer,
   CustomFlex,
   CustomLink,
-  ContainerMoreInformation,
-  ContainerFooter,
-  Col,
-  Row,
   Text,
-  WrapSocials,
   HeadTitle,
-  WrapBtnDowload,
-  BtnGGPlay,
-  BtnAppStore,
-  ContainerMoreInformationLeft,
-  ContainerMoreInformationRight,
   ContainerDownload,
+  ContainerMoreInformation,
+  ContainerContact,
+  ContainerInfo,
 } from "./styles";
-import { MoreInformationLeft, MoreInformationRight } from "./config";
+import { MoreInformation } from "./config";
 import SocialLinks from "./Components/SocialLinks";
 import { FooterProps } from "./types";
-import { ThemeSwitcher } from "../ThemeSwitcher";
-import LangSelector from "../LangSelector/LangSelector";
-import CakePrice from "../CakePrice/CakePrice";
-import { LogoWithTextIcon, ArrowForwardIcon, LogoFooter, GgPlayIcon, AppStoreIcon } from "../Svg";
-import { Button } from "../Button";
-import { Colors } from "../..";
+import { LogoFooter } from "../Svg";
 
 const MenuItem: React.FC<FooterProps> = ({
   items,
@@ -48,50 +28,33 @@ const MenuItem: React.FC<FooterProps> = ({
   ...props
 }) => {
   return (
-    <StyledFooter p={["40px 6px", null, "56px 40px 32px 40px"]} {...props} justifyContent="center">
+    <StyledFooter borderTop='1px solid #777E91' p={["40px 6px", null, "56px 40px 32px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <CustomFlex>
-          <WrapSocials flexDirection="column">
-            <Flex>
-              <LogoFooter />
-            </Flex>
-            <Text>Theo dõi chúng tôi tại</Text>
-            <SocialLinks order={[2]} />
-          </WrapSocials>
-
           <Flex>
-            <ContainerMoreInformationLeft>
-              {MoreInformationLeft.map((items) => {
-                return (
-                  <CustomLink href={items.href} target="_blank">
-                    {items.label}
-                  </CustomLink>
-                );
-              })}
-            </ContainerMoreInformationLeft>
-            <ContainerMoreInformationRight>
-              {MoreInformationRight.map((items) => {
-                return (
-                  <CustomLink href={items.href} target="_blank">
-                    {items.label}
-                  </CustomLink>
-                );
-              })}
-            </ContainerMoreInformationRight>
+            <LogoFooter />
           </Flex>
-          <ContainerDownload flexDirection="column">
+          <ContainerInfo>
+            <ContainerMoreInformation>
+              {MoreInformation.map((items) => {
+                return (
+                  <CustomLink href={items.href} target="_blank">
+                    {items.label}
+                  </CustomLink>
+                );
+              })}
+            </ContainerMoreInformation>
+          </ContainerInfo>
+
+          <ContainerContact flexDirection="column">
             <HeadTitle>Liên Hệ</HeadTitle>
             <Text>hello@runtogether.net</Text>
+          </ContainerContact>
 
-            <WrapBtnDowload>
-              <BtnGGPlay>
-                <GgPlayIcon />
-              </BtnGGPlay>
-              <BtnAppStore>
-                <AppStoreIcon />
-              </BtnAppStore>
-            </WrapBtnDowload>
-          </ContainerDownload>
+          <ContainerContact flexDirection="column">
+            <HeadTitle>Follow us</HeadTitle>
+            <SocialLinks order={[2]} />
+          </ContainerContact>
         </CustomFlex>
 
         {/* <StyledToolsContainer

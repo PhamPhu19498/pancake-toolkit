@@ -82,11 +82,6 @@ export const socials = [
     href: "https://www.facebook.com/Runtogether.official",
   },
   {
-    label: "Globe",
-    icon: "Globe",
-    href: "https://runtogether.net/",
-  },
-  {
     label: "Twitter",
     icon: "Twitter",
     href: "https://twitter.com/RunTogether_Nft",
@@ -94,6 +89,11 @@ export const socials = [
   {
     label: "Telegram",
     icon: "Telegram",
+    href: "https://runtogether.net/",
+  },
+  {
+    label: "Tiktok",
+    icon: "Tiktok",
     href: "https://t.me/Runtogethergroup?fbclid=IwAR2k6m9kmLrf6BrKbFUWZp4giAhuRAqbOT6xTDprNeBndRkT2d-Er3bd8VU",
   },
   // {
@@ -113,22 +113,7 @@ export const socials = [
   // },
   
 ];
-export const MoreInformationLeft = [
-  {
-    label: "Kiến thức chạy bộ",
-    href: "https://whitepaper.runtogether.net/about-run-together/general",
-  },
-  {
-    label: "Tin tức sự kiện",
-    href: "https://docsend.com/view/rf3ygdnx67sqxe6d",
-  },
-  {
-    label: "Runshop",
-    href: "https://bscscan.com/address/0xc643E83587818202E0fFf5eD96D10Abbc8Bb48e7",
-  },
-]
-
-export const MoreInformationRight = [
+export const MoreInformation = [
   {
     label: "Whitepaper",
     href: "https://whitepaper.runtogether.net/about-run-together/general",

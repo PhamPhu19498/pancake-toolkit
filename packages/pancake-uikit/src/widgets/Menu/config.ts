@@ -89,21 +89,6 @@ export const links: MenuItemsType[] = [
       },
     ]
   },
-  {
-    label: 'Cart',
-    icon: 'More',
-    href: '/repo',
-    items: [
-      {
-        label: 'Repo',
-        href: '/repo',
-      },
-      {
-        label: 'Marketplace',
-        href: '/nftmarketplace',
-      },
-    ]
-  }
 ];
 
 export const userMenulinks: DropdownMenuItems[] = [
@@ -148,7 +133,7 @@ export const userMenulinks: DropdownMenuItems[] = [
   },
 ];
 
-export const MENU_HEIGHT = 76;
+export const MENU_HEIGHT = 100;
 export const MENU_ENTRY_HEIGHT = 48;
 export const MOBILE_MENU_HEIGHT = 44;
 export const SIDEBAR_WIDTH_FULL = 240;

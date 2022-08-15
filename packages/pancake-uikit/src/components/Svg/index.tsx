@@ -160,6 +160,8 @@ export { default as LogoFooter } from "./Icons/LogoFooter";
 export { default as TiktokIcon } from "./Icons/Tiktok";
 export { default as GgPlayIcon } from "./Icons/GgPlayIcon";
 export { default as AppStoreIcon } from "./Icons/AppStoreIcon";
+export { default as MenuIcon } from "./Icons/MenuIcon";
+export { default as Cart } from "./Icons/Cart";
 
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";
