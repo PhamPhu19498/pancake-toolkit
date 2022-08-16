@@ -57,6 +57,13 @@ const GlobalMenuModal: React.FC<ModalProps> = ({ title, onDismiss, ...props }) =
     <Button>This button Does nothing</Button>
   </Modal>
 );
+const ButtonCard = () =>{
+  return (
+    <Button>
+      Card
+    </Button>
+  )
+}
 
 const GlobalMenuComponent: React.FC = () => {
   const [onPresent1] = useModal(<GlobalMenuModal title="Display Settings Modal" />);
@@ -89,6 +96,7 @@ const defaultProps = {
   profile: null,
   userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
   globalMenu: <GlobalMenuComponent />,
+  cardMenu:<ButtonCard/>,
   activeItem: "/swap",
   activeSubItem: "https://exchange.pancakeswap.finance",
   buyCakeLabel: "Buy LTD",

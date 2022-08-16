@@ -15,7 +15,7 @@ import { NavProps } from "./types";
 import LangSelector from "../../components/LangSelector/LangSelector";
 import { MenuContext } from "./context";
 import { Cart, CloseIcon, MenuIcon } from "../../components/Svg";
-import { ButtonClose, ButtonOpen, ConataineMenuMobile, ContainerCart, MobilContainer, TextCart } from "./styles";
+import { ButtonOpen, ConataineMenuMobile, ContainerCart, MobilContainer, TextCart } from "./styles";
 import { InlineMenu } from "../../components/BaseMenu";
 import { Button } from "../../components/Button";
 
@@ -81,10 +81,6 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 
 const CustomFlex = styled(Flex)`
   gap: 16px;
-
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }
 `;
 
 const Menu: React.FC<NavProps> = ({
@@ -105,6 +101,7 @@ const Menu: React.FC<NavProps> = ({
   langs,
   buyCakeLabel,
   children,
+  cardMenu,
 }) => {
   const { isMobile } = useMatchBreakpoints();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -174,64 +171,8 @@ const Menu: React.FC<NavProps> = ({
                 <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="12px" />
               )}
             </ContainerNav>
-            <InlineMenu
-              isOpen={isOpen}
-              onClick={() => setChangeIconMenu(false)}
-              component={
-                <ButtonOpen>
-                  <MenuIcon />
-                </ButtonOpen>
-              }
-            >
-              <Box p="24px" width="320px">
-                <ConataineMenuMobile>
-                  <ContainerCart position="relative">
-                    <TextCart>0</TextCart>
-                    <Cart />
-                  </ContainerCart>
-                  {!isMobile && (
-                    <Box mr="12px">
-                      <CakePrice cakePriceUsd={cakePriceUsd} />
-                    </Box>
-                  )}
-                  <Box mt="4px">
-                    <LangSelector
-                      currentLang={currentLang}
-                      langs={langs}
-                      setLang={setLang}
-                      buttonScale="xs"
-                      color="textSubtle"
-                      hideLanguage
-                    />
-                  </Box>
-                  {userMenu}
-                  {globalMenu}
-                  {/* <ButtonClose scale="sm" variant="danger" onClick={() => setIsOpen(false)}>
-                    <CloseIcon />
-                  </ButtonClose> */}
-                </ConataineMenuMobile>
-              </Box>
-            </InlineMenu>
             <CustomFlex alignItems="center" height="100%">
-              <Flex position="relative">
-                <TextCart>0</TextCart>
-                <Cart />
-              </Flex>
-              {!isMobile && (
-                <Box mr="12px">
-                  <CakePrice cakePriceUsd={cakePriceUsd} />
-                </Box>
-              )}
-              <Box mt="4px">
-                <LangSelector
-                  currentLang={currentLang}
-                  langs={langs}
-                  setLang={setLang}
-                  buttonScale="xs"
-                  color="textSubtle"
-                  hideLanguage
-                />
-              </Box>
+              {cardMenu}
               {userMenu}
               {globalMenu}
             </CustomFlex>
@@ -263,7 +204,7 @@ const Menu: React.FC<NavProps> = ({
               currentLang={currentLang}
               cakePriceUsd={cakePriceUsd}
               buyCakeLabel={buyCakeLabel}
-              mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
+              // mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
             />
           </Inner>
         </BodyWrapper>
