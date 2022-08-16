@@ -89,7 +89,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
 
   useEffect(() => {
     const showDropdownMenu = () => {
-      setIsOpen(true);
+      setIsOpen(false);
     };
 
     const hideDropdownMenu = (evt: MouseEvent | TouchEvent) => {
