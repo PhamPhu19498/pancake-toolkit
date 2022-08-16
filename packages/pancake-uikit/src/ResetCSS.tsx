@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const ResetCSS = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;300;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,500;1,700&family=Roboto:wght@100;300;400;500;700&family=Splash&display=swap');
   /* prettier-ignore */
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -64,8 +65,8 @@ const ResetCSS = createGlobalStyle`
     box-sizing: border-box;
   }
   * {
-    font-family: 'Poppins';
-    font-style: normal;
+    /* font-style: normal; */
+    font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -24,6 +24,7 @@ const ContainerLogo = styled(Flex)`
 
   @media screen and (max-width: 600px) {
     padding-right: 20px;
+    border-right: none;
   }
 
   @media screen and (max-width: 400px) {

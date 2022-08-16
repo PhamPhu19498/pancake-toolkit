@@ -35,8 +35,7 @@ export const StyledListItem = styled.li`
   }
 `;
 
-export const ContainerInfo = styled(Flex) `
-`
+export const ContainerInfo = styled(Flex)``;
 
 export const StyledIconMobileContainer = styled(Box)`
   margin-bottom: 24px;
@@ -69,7 +68,7 @@ export const CustomFlex = styled(Flex)`
   display: grid;
   grid-template-columns: repeat(auto-fill, 25%);
   @media screen and (max-width: 768px) {
-    padding: 56px 40px 50px 40px;
+    padding: 56px 0px 50px 0px;
   }
   @media only screen and (max-width: 600px) {
     flex-direction: column;
@@ -92,7 +91,6 @@ export const CustomLink = styled.a`
   justify-content: flex-start;
   align-items: flex-start;
 `;
-
 
 export const ContainerMoreInformation = styled(Flex)`
   width: 338px;
@@ -161,8 +159,9 @@ export const ContainerDownload = styled(Flex)`
   gap: 15px;
 `;
 
-// export const ContainerFooter = styled(Flex)`
-//   @media screen and (max-width: 500px) {
-    
-//   }
-// `
+export const CsTextEmail = styled(Text)`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #23262f;
+`;

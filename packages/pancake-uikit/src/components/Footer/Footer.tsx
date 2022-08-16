@@ -10,6 +10,7 @@ import {
   ContainerMoreInformation,
   ContainerContact,
   ContainerInfo,
+  CsTextEmail,
 } from "./styles";
 import { MoreInformation } from "./config";
 import SocialLinks from "./Components/SocialLinks";
@@ -48,7 +49,7 @@ const MenuItem: React.FC<FooterProps> = ({
 
           <ContainerContact flexDirection="column">
             <HeadTitle>Liên Hệ</HeadTitle>
-            <Text>hello@runtogether.net</Text>
+            <CsTextEmail>hello@runtogether.net</CsTextEmail>
           </ContainerContact>
 
           <ContainerContact flexDirection="column">
