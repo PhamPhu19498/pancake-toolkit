@@ -28,9 +28,11 @@ export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $i
   outline: 0;
   padding-left: 10px;
   padding-right: 10px;
+  border-radius:8px;
   width: 100%;
   &:hover:not(:disabled) {
-    background-color: ${({ theme }) => theme.colors.input};
+    background-color: #FF592C;
+    color:#fff;
   }
 
   &:active:not(:disabled) {
@@ -40,15 +42,13 @@ export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $i
 `;
 
 export const StyledDropdownMenuItemContainer = styled.div`
-  &:first-child > ${DropdownMenuItem} {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+  /* &:first-child > ${DropdownMenuItem} {
+    border-radius:8px;
   }
 
   &:last-child > ${DropdownMenuItem} {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-  }
+    border-radius:8px;
+  } */
 `;
 
 export const DropdownMenuDivider = styled.hr`
@@ -63,10 +63,12 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: 16px;
   pointer-events: auto;
-  width: ${({ $isBottomNav }) => ($isBottomNav ? "calc(100% - 32px)" : "280px")};
+  /* width: ${({ $isBottomNav }) => ($isBottomNav ? "calc(100% - 32px)" : "280px")}; */
+  width: 200px;
+  padding: 12px;
   visibility: visible;
   z-index: 1001;
-
+  box-shadow: 0px 4px 24px rgba(133, 133, 133, 0.2);
   ${({ $isOpen }) =>
     !$isOpen &&
     `

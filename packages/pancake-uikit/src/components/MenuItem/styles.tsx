@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { StyledMenuItemProps } from "./types";
+import { ChevronDownIcon } from "../Svg";
 
 export const StyledMenuItemContainer = styled.div<StyledMenuItemProps>`
   position: relative;
@@ -24,11 +25,12 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   position: relative;
   display: flex;
   align-items: center;
-
   color: ${({ theme, $isActive }) => ($isActive ? theme.colors.primaryBright : theme.colors.textSubtle)};
   font-size: 16px;
   font-weight: ${({ $isActive }) => ($isActive ? "600" : "400")};
-
+  > svg {
+    fill: ${({ theme, $isActive }) => ($isActive ? theme.colors.primaryBright : theme.colors.textSubtle)} ;
+  }
   ${({ $statusColor, theme }) =>
     $statusColor &&
     `
@@ -55,6 +57,9 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
 
   &:hover {
     color: ${({ theme}) => theme.colors.primaryBright};
+    > svg {
+      fill: ${({ theme }) => theme.colors.primaryBright} !important;
+    }
   }
 `;
 
