@@ -36,7 +36,7 @@ export const links: MenuItemsType[] = [
     ],
   },
   {
-    label: 'Inventory',
+    label: 'Account',
     href: '/farms',
     icon: 'Earn',
     items: [
@@ -51,7 +51,7 @@ export const links: MenuItemsType[] = [
     ],
   },
   {
-    label: 'My Balance',
+    label: 'Inventory',
     icon: 'Membership',
     href: '/membership',
     showItemsOnMobile:true,
@@ -63,7 +63,7 @@ export const links: MenuItemsType[] = [
     ]
   },
   {
-    label: 'Account',
+    label: 'Partners',
     icon: 'Dipo',
     href: '/dipo/live',
     showItemsOnMobile:true,
@@ -75,7 +75,7 @@ export const links: MenuItemsType[] = [
     ]
   },
   {
-    label: 'Referral',
+    label: 'My Balance',
     icon: 'More',
     href: '/repo',
     items: [

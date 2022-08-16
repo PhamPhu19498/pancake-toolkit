@@ -89,12 +89,12 @@ export const socials = [
   {
     label: "Telegram",
     icon: "Telegram",
-    href: "https://runtogether.net/",
+    href: "https://t.me/Runtogethergroup?fbclid=IwAR2k6m9kmLrf6BrKbFUWZp4giAhuRAqbOT6xTDprNeBndRkT2d-Er3bd8VU",
   },
   {
-    label: "Tiktok",
-    icon: "Tiktok",
-    href: "https://t.me/Runtogethergroup?fbclid=IwAR2k6m9kmLrf6BrKbFUWZp4giAhuRAqbOT6xTDprNeBndRkT2d-Er3bd8VU",
+    label: "Global",
+    icon: "Global",
+    href: "https://runtogether.net/",
   },
   // {
   //   label: "GitLab",

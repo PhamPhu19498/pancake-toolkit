@@ -69,6 +69,9 @@ const BodyWrapper = styled(Box)`
 
 const ContainerNav = styled(Flex)`
   gap: 20px;
+  @media screen and (max-width: 1024px) {
+    gap: 0;
+  }
 `;
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
@@ -81,6 +84,9 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 
 const CustomFlex = styled(Flex)`
   gap: 16px;
+  @media screen  {
+    gap: 5px;
+  }
 `;
 
 const Menu: React.FC<NavProps> = ({
