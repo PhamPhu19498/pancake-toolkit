@@ -92,8 +92,8 @@ export const socials = [
     href: "https://t.me/Runtogethergroup?fbclid=IwAR2k6m9kmLrf6BrKbFUWZp4giAhuRAqbOT6xTDprNeBndRkT2d-Er3bd8VU",
   },
   {
-    label: "Global",
-    icon: "Global",
+    label: "Globe",
+    icon: "Globe",
     href: "https://runtogether.net/",
   },
   // {
