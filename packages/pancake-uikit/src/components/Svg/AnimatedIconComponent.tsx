@@ -19,7 +19,12 @@ const AnimatedIconComponent: React.FC<IconComponentType> = ({
   return IconElement ? (
     <StyledAnimatedIconComponent isActive={isActive} hasFillIcon={hasFillIcon} {...props}>
       <StyledIconContainer>
-        <IconElement color={color} />
+        { isActive ?
+            <IconElementFill/>
+        :
+            <IconElement color={color} />
+        }
+        
       </StyledIconContainer>
       {hasFillIcon && (
         <StyledIconContainer {...props}>

@@ -21,7 +21,7 @@ export const status = {
 export const links: MenuItemsType[] = [
   {
     label: 'Marketplace',
-    icon: 'Swap',
+    icon: 'Partner',
     href: '/swap',
     showItemsOnMobile: true,
     items: [
@@ -43,6 +43,14 @@ export const links: MenuItemsType[] = [
       {
         label:'Farms',
         href: '/farms',
+      },
+      {
+        label: 'Pools',
+        href: '/pools',
+      },
+      {
+        label: 'Pools',
+        href: '/pools',
       },
       {
         label: 'Pools',

@@ -1,4 +1,4 @@
-export { default as AccountFilledIcon } from "./Icons/AccountFilled";
+export { default as AccountFillIcon } from "./Icons/AccountFilled";
 export { default as AccountIcon } from "./Icons/Account";
 export { default as AddIcon } from "./Icons/Add";
 export { default as ArrowBackIcon } from "./Icons/ArrowBack";
@@ -162,6 +162,10 @@ export { default as GgPlayIcon } from "./Icons/GgPlayIcon";
 export { default as AppStoreIcon } from "./Icons/AppStoreIcon";
 export { default as MenuIcon } from "./Icons/MenuIcon";
 export { default as Cart } from "./Icons/Cart";
+export { default as MarketplaceIcon } from "./Icons/MarketplaceIcon";
+export { default as MarketplaceFillIcon} from "./Icons/MarketplaceFillIcon";
+export { default as PartnerIcon} from "./Icons/Partner";
+export { default as PartnerFillIcon} from "./Icons/PartnerFil";
 
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";
