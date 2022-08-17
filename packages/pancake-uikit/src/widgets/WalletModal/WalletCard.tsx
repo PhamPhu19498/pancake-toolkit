@@ -30,6 +30,11 @@ const WalletButton = styled(Button).attrs({ width: "100%", variant: "text" })`
   &:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
     background: #E45F35;
     opacity: 1;
+    color: #fff;
+
+    div {
+      color: #fff;
+    }
   }
 `;
 
@@ -42,6 +47,7 @@ const WalletButtonShowMore = styled(WalletButton)`
     opacity: 1;
   }
 `;
+
 
 interface MoreWalletCardProps extends ButtonProps {
   t: (key: string) => string;

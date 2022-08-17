@@ -27,7 +27,7 @@ export const ModalTitle = styled(Flex)`
 export const ModalBody = styled(Flex)`
   flex-direction: column;
   max-height: 70vh;
-  /* overflow-y: auto; */
+  overflow-y: auto;
   &::-webkit-scrollbar-thumb {
     display: none;
   }
