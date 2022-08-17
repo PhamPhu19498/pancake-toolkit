@@ -18,6 +18,7 @@ import { Cart, CloseIcon, MenuIcon } from "../../components/Svg";
 import { ButtonOpen, ConataineMenuMobile, ContainerCart, MobilContainer, TextCart } from "./styles";
 import { InlineMenu } from "../../components/BaseMenu";
 import { Button } from "../../components/Button";
+import { Text } from "../../components/Text";
 
 const Wrapper = styled.div`
   position: relative;
@@ -81,13 +82,17 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   max-width: 100%;
 `;
 
-
 const CustomFlex = styled(Flex)`
   gap: 16px;
-  @media screen  {
-    gap: 5px;
-  }
 `;
+
+const CustomMenuMobile = styled(Flex)`
+  display: none;
+
+  @media screen and (max-width: 400px) {
+    display: block;
+  }
+`
 
 const Menu: React.FC<NavProps> = ({
   linkComponent = "a",

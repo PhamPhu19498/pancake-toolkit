@@ -19,7 +19,8 @@ import { links, userMenulinks } from "./config";
 import Menu from "./Menu";
 import { Language, NavProps } from "./types";
 import BottomDrawer from "../../components/BottomDrawer/BottomDrawer";
-import { CustomButton } from './styles'
+import { CsBoxMenuMobile, CustomButton } from "./styles";
+import { InlineMenu } from "../../components/BaseMenu";
 
 export default {
   title: "Widgets/Menu",
@@ -45,8 +46,8 @@ const UserMenuComponent: React.FC<{ variant?: Variant; text?: string; account?: 
 }) => {
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   return (
-    <DropdownMenu items={userMenulinks} py="12px">
-      <UserMenu account={text || accountEllipsis} avatarSrc="" variant={variant} />
+    <DropdownMenu  items={userMenulinks} py="12px">
+      <UserMenu  account={text || accountEllipsis} avatarSrc="" variant={variant} />
     </DropdownMenu>
   );
 };
@@ -57,13 +58,22 @@ const GlobalMenuModal: React.FC<ModalProps> = ({ title, onDismiss, ...props }) =
     <Button>This button Does nothing</Button>
   </Modal>
 );
-const ButtonCard = () =>{
+const ButtonCard = () => {
+  return <Button>Card</Button>;
+};
+
+const ButtonMenuMobile = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <Button>
-      Card
-    </Button>
-  )
-}
+    <InlineMenu component={<Button>Menu Mobile</Button>} isOpen={isOpen}>
+      <CsBoxMenuMobile p="24px" width="320px">
+        <ButtonCard />
+        <GlobalMenuComponent />
+        <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />
+      </CsBoxMenuMobile>
+    </InlineMenu>
+  );
+};
 
 const GlobalMenuComponent: React.FC = () => {
   const [onPresent1] = useModal(<GlobalMenuModal title="Display Settings Modal" />);
@@ -96,7 +106,7 @@ const defaultProps = {
   profile: null,
   userMenu: <UserMenuComponent account="0xbdda50183d817c3289f895a4472eb475967dc980" />,
   globalMenu: <GlobalMenuComponent />,
-  cardMenu:<ButtonCard/>,
+  cardMenu: <ButtonCard />,
   activeItem: "/swap",
   activeSubItem: "https://exchange.pancakeswap.finance",
   buyCakeLabel: "Buy LTD",

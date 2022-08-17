@@ -166,6 +166,7 @@ export { default as MarketplaceIcon } from "./Icons/MarketplaceIcon";
 export { default as MarketplaceFillIcon} from "./Icons/MarketplaceFillIcon";
 export { default as PartnerIcon} from "./Icons/Partner";
 export { default as PartnerFillIcon} from "./Icons/PartnerFil";
+export { default as WorkingIcon} from "./Icons/Working";
 
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";

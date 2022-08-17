@@ -70,10 +70,12 @@ export const CustomFlex = styled(Flex)`
   @media screen and (max-width: 768px) {
     padding: 56px 0px 50px 0px;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 56px 40px 50px 30px;
+    align-items: flex-start;
+    gap: 60px;
   }
   @media only screen and (max-width: 500px) {
     display: flex;

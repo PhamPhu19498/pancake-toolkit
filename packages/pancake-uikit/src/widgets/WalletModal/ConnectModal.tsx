@@ -79,7 +79,6 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
         <Box>
           <Flex justifyContent='space-between'>
             <TransferLink>{!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}</TransferLink>
-            <TransferLink href="https://www.investopedia.com/terms/b/blockchain-wallet.asp" target="_blank">What is a wallet?</TransferLink>
           </Flex>
         </Box>
       </ModalBody>

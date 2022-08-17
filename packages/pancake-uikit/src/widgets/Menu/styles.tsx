@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Flex } from "../../components/Box";
+import { Box, Flex } from "../../components/Box";
 import { Button } from "../../components/Button";
 import { Text } from "../../components/Text";
 
@@ -67,4 +67,10 @@ export const ContainerCart = styled(Flex)`
 export const ButtonOpen = styled(Button)`
   background: transparent;
   box-shadow: none;
+`;
+
+export const CsBoxMenuMobile = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
