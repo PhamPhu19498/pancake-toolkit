@@ -89,7 +89,7 @@ export const socials = [
   {
     label: "Telegram",
     icon: "Telegram",
-    href: "https://t.me/Runtogethergroup?fbclid=IwAR2k6m9kmLrf6BrKbFUWZp4giAhuRAqbOT6xTDprNeBndRkT2d-Er3bd8VU",
+    href: "https://t.me/Runtogethergroup",
   },
   {
     label: "Globe",
