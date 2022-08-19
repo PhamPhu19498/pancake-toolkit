@@ -119,7 +119,7 @@ export const MoreInformation = [
     href: "https://whitepaper.runtogether.net/about-run-together/general",
   },
   {
-    label: "Pitchdesk",
+    label: "Pitchdeck",
     href: "https://docsend.com/view/rf3ygdnx67sqxe6d",
   },
   {
