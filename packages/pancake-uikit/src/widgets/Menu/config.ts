@@ -45,8 +45,9 @@ export const links: MenuItemsType[] = [
         href: '/farms',
       },
       {
-        label: 'Pools',
-        href: '/pools',
+        label: "Pawn NFT",
+        href: 'https://dapp.bami.money/pawn',
+        type:1
       },
       {
         label: 'Pools',

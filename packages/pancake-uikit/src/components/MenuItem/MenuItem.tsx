@@ -9,6 +9,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   isActive = false,
   variant = "default",
   statusColor,
+  isExternal,
   ...props
 }) => {
   const { linkComponent } = useContext(MenuContext);
@@ -22,9 +23,16 @@ const MenuItem: React.FC<MenuItemProps> = ({
       };
   return (
     <StyledMenuItemContainer $isActive={isActive} $variant={variant}>
-      <StyledMenuItem {...itemLinkProps} $isActive={isActive} $variant={variant} $statusColor={statusColor} {...props}>
-        {children}
-      </StyledMenuItem>
+      { isExternal === true ?
+        <StyledMenuItem {...itemLinkProps} $isActive={isActive} $variant={variant} $statusColor={statusColor} {...props} target="_blank" rel="noopener">
+          {children}
+        </StyledMenuItem>
+      :
+        <StyledMenuItem {...itemLinkProps} $isActive={isActive} $variant={variant} $statusColor={statusColor} {...props}>
+          {children}
+        </StyledMenuItem>
+      }
+     
     </StyledMenuItemContainer>
   );
 };
