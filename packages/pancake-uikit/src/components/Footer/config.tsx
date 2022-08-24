@@ -120,7 +120,7 @@ export const MoreInformation = [
   },
   {
     label: "Pitchdeck",
-    href: "https://docsend.com/view/rf3ygdnx67sqxe6d",
+    href: "https://www.canva.com/design/DAFIInvsnSE/gekrsh7uKhe5rYPR888doA/view#16",
   },
   {
     label: "Smart Contract",
