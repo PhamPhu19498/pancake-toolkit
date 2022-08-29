@@ -120,7 +120,7 @@ export const MoreInformation = [
   },
   {
     label: "Pitchdeck",
-    href: "https://www.canva.com/design/DAFIInvsnSE/gekrsh7uKhe5rYPR888doA/view#16",
+    href: "https://runtogether.net/wp-content/uploads/2022/08/Pitchdeck-Run-Together-Eng.pdf",
   },
   {
     label: "Smart Contract",
