@@ -21,7 +21,7 @@ export const status = {
 export const links: MenuItemsType[] = [
   {
     label: 'Marketplace',
-    icon: 'Partner',
+    icon: 'ExChange',
     href: '/swap',
     showItemsOnMobile: true,
     items: [
