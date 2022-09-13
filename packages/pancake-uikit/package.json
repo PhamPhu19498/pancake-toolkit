@@ -1,6 +1,6 @@
 {
-  "name": "@phamphu19498/livetrade-uikit",
-  "version": "1.65.4",
+  "name": "@baont0209/pibridge-uikit",
+  "version": "1.0.4",
   "description": "Set of UI components for pancake projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
