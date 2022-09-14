@@ -82,6 +82,7 @@ const Menu: React.FC<NavProps> = ({
   langs,
   buyCakeLabel,
   children,
+  linkImages
 }) => {
   const { isMobile } = useMatchBreakpoints();
   const [windowSize, setWindowSize] = useState(window.innerWidth)
@@ -144,7 +145,7 @@ const Menu: React.FC<NavProps> = ({
           {banner && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
           <StyledNav>
             <Flex>
-              <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
+              <Logo isDark={isDark} href={homeLink?.href ?? "/"} linkImages={linkImages}/>
               {/* {windowSize> 840 && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="12px" />} */}
             </Flex>
             <Flex alignItems="center" height="100%">

@@ -194,7 +194,9 @@ export const NotConnected: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         links={links}
+        linkImages="https://hesman.net/wp-content/uploads/2022/02/hesman-logo.svg"
         subLinks={subLinks}
+        
         footerLinks={footerLinks}
       >
         <div>
