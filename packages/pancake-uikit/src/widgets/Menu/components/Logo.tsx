@@ -30,6 +30,9 @@ const StyledLink = styled("a")`
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
     }
+    @media screen {
+     width: 50px;
+    }
   }
   .eye {
     animation-delay: 20ms;
@@ -57,12 +60,7 @@ const Logo: React.FC<Props> = ({ isDark, href, linkImages }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      {/* <LogoIcon className="mobile-icon" /> */}
-      {/* <PiBridgeLogo className="mobile-icon"/>
-      <PiBridgeLogo className="desktop-icon"/> */}
-      {/* <LogoWithTextIcon className="desktop-icon" isDark={isDark} /> */}
-      <Img src={linkImages} alt="logo-pibridge"/>
-      
+      <Img src={linkImages} className="desktop-icon" alt="logo-pibridge"/>
     </>
   );
 
