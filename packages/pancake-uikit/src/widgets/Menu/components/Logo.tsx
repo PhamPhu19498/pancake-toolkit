@@ -47,10 +47,10 @@ const StyledLink = styled("a")`
   }
 `;
 const Img = styled.img`
-  width: auto;
-  height: 42.47px;
+  width: 95px;
+  height: auto;
   @media only screen and (max-width: 600px) {
-    width: 80px;
+    width: 70px;
     height: auto;
   }
 `
@@ -60,7 +60,8 @@ const Logo: React.FC<Props> = ({ isDark, href, linkImages }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <Img src={linkImages} className="desktop-icon" alt="logo-pibridge"/>
+    {/* {linkImages} */}
+      <Img src="https://banner2.cleanpng.com/20180519/rya/kisspng-logo-phoenix-art-5afffc96998f80.692522331526725782629.jpg" alt="logo-pibridge"/>
     </>
   );
 

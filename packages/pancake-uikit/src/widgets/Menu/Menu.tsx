@@ -33,6 +33,18 @@ const StyledNav = styled.nav`
 
   padding-left: 150px;
   padding-right: 150px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0px 100px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0px 70px    
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0px 10px;
+  }
 `;
 
 const FixedContainer = styled.div<{ showMenu: boolean; height: number }>`
