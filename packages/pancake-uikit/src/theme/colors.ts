@@ -12,6 +12,7 @@ export const baseColors = {
   redeem:"#56A9BB",
   secondaryDark:"#182636",
   PrimaryLight:"#49A2F2",
+  textColor: "#494949"
 };
 
 export const additionalColors = {

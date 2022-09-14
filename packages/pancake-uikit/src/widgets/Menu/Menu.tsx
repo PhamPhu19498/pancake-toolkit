@@ -26,12 +26,13 @@ const StyledNav = styled.nav`
   align-items: center;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  /* background-color: ${({ theme }) => theme.nav.background}; */
+  background-color: transparent;
+  /* border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder}; */
   transform: translate3d(0, 0, 0);
 
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 150px;
+  padding-right: 150px;
 `;
 
 const FixedContainer = styled.div<{ showMenu: boolean; height: number }>`
@@ -144,10 +145,10 @@ const Menu: React.FC<NavProps> = ({
           <StyledNav>
             <Flex>
               <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-              {windowSize> 840 && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="12px" />}
+              {/* {windowSize> 840 && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="12px" />} */}
             </Flex>
             <Flex alignItems="center" height="100%">
-              {!isMobile && (
+              {/* {!isMobile && (
                 <Box mr="12px">
                   <CakePrice cakePriceUsd={cakePriceUsd} />
                 </Box>
@@ -161,8 +162,9 @@ const Menu: React.FC<NavProps> = ({
                   color="textSubtle"
                   hideLanguage
                 />
-              </Box>
-              {globalMenu} {userMenu}
+              </Box> */}
+              {/* {globalMenu}  */}
+              {userMenu}
             </Flex>
           </StyledNav>
         </FixedContainer>
@@ -183,7 +185,7 @@ const Menu: React.FC<NavProps> = ({
         <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
           <Inner isPushed={false} showMenu={showMenu}>
             {children}
-            <Footer
+            {/* <Footer
               items={footerLinks}
               isDark={isDark}
               toggleTheme={toggleTheme}
@@ -193,7 +195,7 @@ const Menu: React.FC<NavProps> = ({
               cakePriceUsd={cakePriceUsd}
               buyCakeLabel={buyCakeLabel}
               mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
-            />
+            /> */}
           </Inner>
         </BodyWrapper>
         {windowSize<= 840 && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
