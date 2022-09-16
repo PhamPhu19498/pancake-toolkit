@@ -77,6 +77,7 @@ const defaultProps = {
   linkComponent: ({ href, ...props }) => {
     return <Link to={href} {...props} />;
   },
+  bgColorMenu: '',
   account: "0xbdda50183d817c3289f895a4472eb475967dc980",
   login: noop,
   logout: noop,
@@ -196,8 +197,8 @@ export const NotConnected: React.FC = () => {
         links={links}
         linkImages="https://hesman.net/wp-content/uploads/2022/02/hesman-logo.svg"
         subLinks={subLinks}
-        
         footerLinks={footerLinks}
+        bgColorMenu="transparent"
       >
         <div>
           <h1>Page body</h1>

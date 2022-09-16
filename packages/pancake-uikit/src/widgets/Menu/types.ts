@@ -33,4 +33,5 @@ export interface NavProps {
   langs: Language[];
   setLang: (lang: Language) => void;
   linkImages?:string
+  bgColorMenu ?: unknown
 }
