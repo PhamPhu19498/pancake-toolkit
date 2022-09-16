@@ -60,8 +60,8 @@ const Logo: React.FC<Props> = ({ isDark, href, linkImages }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-    {/* {linkImages} */}
-      <Img src="https://banner2.cleanpng.com/20180519/rya/kisspng-logo-phoenix-art-5afffc96998f80.692522331526725782629.jpg" alt="logo-pibridge"/>
+    
+      <Img src={linkImages} alt="logo-pibridge"/>
     </>
   );
 
