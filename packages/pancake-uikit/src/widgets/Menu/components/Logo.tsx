@@ -25,7 +25,7 @@ const StyledLink = styled("a")`
     }
   }
   .desktop-icon {
-    width: 95px;
+    width: 90px;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
@@ -47,7 +47,7 @@ const StyledLink = styled("a")`
   }
 `;
 const Img = styled.img`
-  width: 95px;
+  width: 90px;
   height: auto;
   @media only screen and (max-width: 600px) {
     width: 70px;

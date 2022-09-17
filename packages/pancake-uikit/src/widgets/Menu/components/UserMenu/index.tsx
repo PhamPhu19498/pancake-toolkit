@@ -16,6 +16,15 @@ export const StyledUserMenu = styled(Flex)`
   position: relative;
   border: 1px solid #494949;
 
+  @media screen and (max-width: 600px) {
+    padding: 0px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &:hover {
     opacity: 0.65;
   }
@@ -23,8 +32,9 @@ export const StyledUserMenu = styled(Flex)`
 
 export const LabelText = styled.div`
   color: ${({ theme }) => theme.colors.textColor};
+  font-family: 'Marcellus', serif;
   /* display: none; */
-  font-weight: 600;
+  font-weight: 300;
 
   ${({ theme }) => theme.mediaQueries.sm} {
     display: block;
@@ -71,7 +81,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [targetRef, setTargetRef] = useState<HTMLDivElement | null>(null);
   const [tooltipRef, setTooltipRef] = useState<HTMLDivElement | null>(null);
-  const accountEllipsis = account ? `${account.substring(0, 2)}...${account.substring(account.length - 4)}` : null;
+  const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   const { styles, attributes } = usePopper(targetRef, tooltipRef, {
     strategy: "fixed",
     placement: "bottom-end",

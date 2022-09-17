@@ -10,7 +10,7 @@ import { SubMenuItems } from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
 import CakePrice from "../../components/CakePrice/CakePrice";
 import Logo from "./components/Logo";
-import { MENU_HEIGHT, MOBILE_MENU_HEIGHT, TOP_BANNER_HEIGHT, TOP_BANNER_HEIGHT_MOBILE } from "./config";
+import { MENU_HEIGHT, MENU_HEIGHT_MOBILE, MOBILE_MENU_HEIGHT, TOP_BANNER_HEIGHT, TOP_BANNER_HEIGHT_MOBILE } from "./config";
 import { NavProps } from "./types";
 import LangSelector from "../../components/LangSelector/LangSelector";
 import { MenuContext } from "./context";
@@ -44,6 +44,11 @@ const StyledNav = styled.nav<{ bgColorMenu: any, showMenuUp: boolean }>`
   }
 
   @media screen and (max-width: 600px) {
+    padding: 0px 30px;
+    /* height: ${MENU_HEIGHT_MOBILE}px; */
+  }
+
+  @media screen and (max-width: 350px) {
     padding: 0px 10px;
   }
 `;
@@ -189,12 +194,12 @@ const Menu: React.FC<NavProps> = ({
         </FixedContainer>
         {subLinks && (
           <Flex justifyContent="space-around">
-            <SubMenuItems items={subLinksWithoutMobile} activeItem={activeSubItem} mt={`${totalTopMenuHeight + 1}px`}/>
+            <SubMenuItems items={subLinksWithoutMobile} activeItem={activeSubItem}/>
 
             {subLinksMobileOnly?.length > 0 && (
               <SubMenuItems
                 items={subLinksMobileOnly}
-                mt={`${totalTopMenuHeight + 1}px`}
+                // mt={`${totalTopMenuHeight + 1}px`}
                 activeItem={activeSubItem}
                 isMobileOnly
               />
@@ -202,7 +207,7 @@ const Menu: React.FC<NavProps> = ({
           </Flex>
         )}
         {/* <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}> */}
-        <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
+        <BodyWrapper>
           <Inner isPushed={false} showMenu={showMenu}>
             {children}
             {/* <Footer
