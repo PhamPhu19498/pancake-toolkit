@@ -6,12 +6,13 @@ import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
 import { ModalProps } from "./types";
 
-export const ModalHeader = styled.div<{ background?: string }>`
+export const ModalHeader = styled.div<{ background?: string, position?: string }>`
   align-items: center;
   background: ${({ theme }) => theme.colors.modalHeader};
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   display: flex;
   padding: 12px 24px;
+  position: ${({position}) => position || 'inherit'};
 `;
 
 export const ModalTitle = styled(Flex)`
@@ -27,9 +28,10 @@ export const ModalBody = styled(Flex)`
 
 export const ModalCloseButton: React.FC<{ onDismiss: ModalProps["onDismiss"] }> = ({ onDismiss }) => {
   return (
-    <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
-      <CloseIcon color="text" />
-    </IconButton>
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+    <CsIconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
+      <CsCloseIcon color="text" />
+    </CsIconButton>
   );
 };
 
@@ -57,3 +59,18 @@ export const ModalContainer = styled(Box)<{ minWidth: string }>`
     max-width: 100%;
   }
 `;
+
+
+const CsIconButton = styled(IconButton)`
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #EEB063;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+`
+
+const CsCloseIcon = styled(CloseIcon)`
+  fill: #FFFFFF;
+`

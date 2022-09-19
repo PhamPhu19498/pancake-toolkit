@@ -23,6 +23,32 @@ const WalletWrapper = styled(Box)`
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
 `;
 
+const CsModalContainer = styled(ModalContainer)`
+  /* background: url('https://static.vecteezy.com/system/resources/previews/003/619/016/original/abstract-purple-violet-frame-or-border-watercolor-texture-in-white-background-free-vector.jpg'); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-color: #FFF8E7;
+  padding: 20px 10px;
+  border: none;
+    border-radius: 12px;
+`
+
+const CsModalHeader = styled(ModalHeader)`
+  background: transparent;
+  position: relative;
+  border-bottom: none;
+`
+
+const CsModalTitle = styled(ModalTitle)`
+  justify-content: center;
+`
+
+
+const CsGrid = styled(Grid)`
+  /* display: flex; */
+`
+ 
 /**
  * Checks local storage if we have saved the last wallet the user connected with
  * If we find something we put it at the top of the list
@@ -56,25 +82,26 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
   const displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
 
   return (
-    <ModalContainer minWidth="320px">
-      <ModalHeader background={getThemeValue("colors.gradients.bubblegum")(theme)}>
-        <ModalTitle>
+    <CsModalContainer background='#FFF8E7' minWidth="320px">
+      {/* <ModalHeader background={getThemeValue("colors.gradients.bubblegum")(theme)}> */}
+      <CsModalHeader>
+        <CsModalTitle>
           <Heading>{t("Connect Wallet")}</Heading>
-        </ModalTitle>
+        </CsModalTitle>
         <ModalCloseButton onDismiss={onDismiss} />
-      </ModalHeader>
-      <ModalBody width={["320px", null, "340px"]}>
+      </CsModalHeader>
+      <ModalBody width="100%">
         <WalletWrapper py="24px" maxHeight="453px" overflowY="auto">
-          <Grid gridTemplateColumns="1fr 1fr">
+          <CsGrid gridTemplateColumns="1fr 1fr">
             {displayListConfig.map((wallet) => (
               <Box key={wallet.title}>
                 <WalletCard walletConfig={wallet} login={login} onDismiss={onDismiss} />
               </Box>
             ))}
             {!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}
-          </Grid>
+          </CsGrid>
         </WalletWrapper>
-        <Box p="24px">
+        {/* <Box p="24px">
           <Text textAlign="center" color="textSubtle" as="p" mb="16px">
             {t("Haven’t got a crypto wallet yet?")}
           </Text>
@@ -87,9 +114,9 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
           >
             {t("Learn How to Connect")}
           </Button>
-        </Box>
+        </Box> */}
       </ModalBody>
-    </ModalContainer>
+    </CsModalContainer>
   );
 };
 
