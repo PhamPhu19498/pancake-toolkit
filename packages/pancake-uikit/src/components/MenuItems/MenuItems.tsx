@@ -16,7 +16,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ items = [], activeItem, activeSub
         return (
           <DropdownMenu key={`${label}#${href}#${icon}`} items={menuItems} py={1} activeItem={activeSubItem}>
             <MenuItem {...linkProps} isActive={isActive} statusColor={statusColor}>
-              {label || <IconComponent iconName={icon} color={isActive ? "primaryBright" : "textSubtle"} />}
+              {/* {label || <IconComponent iconName={icon} color={isActive ? "primaryBright" : "textSubtle"} />} */}
             </MenuItem>
           </DropdownMenu>
         );

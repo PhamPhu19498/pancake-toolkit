@@ -47,10 +47,10 @@ const StyledLink = styled("a")`
   }
 `;
 const Img = styled.img`
-  width: 90px;
+  width: 70px;
   height: auto;
   @media only screen and (max-width: 600px) {
-    width: 70px;
+    width: 60px;
     height: auto;
   }
 `

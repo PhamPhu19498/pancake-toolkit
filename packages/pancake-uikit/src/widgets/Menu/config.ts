@@ -97,35 +97,35 @@ export const userMenulinks: DropdownMenuItems[] = [
     onClick: noop,
     type: DropdownMenuItemType.BUTTON,
   },
-  {
-    label: "Transactions",
-    type: DropdownMenuItemType.BUTTON,
-  },
-  {
-    type: DropdownMenuItemType.DIVIDER,
-  },
-  {
-    type: DropdownMenuItemType.BUTTON,
-    disabled: true,
-    label: "Dashboard",
-  },
-  {
-    type: DropdownMenuItemType.BUTTON,
-    disabled: true,
-    label: "Portfolio",
-  },
-  {
-    label: "Profile",
-    href: "/profile",
-  },
-  {
-    type: DropdownMenuItemType.EXTERNAL_LINK,
-    href: "https://pancakeswap.finance",
-    label: "Link",
-  },
-  {
-    type: DropdownMenuItemType.DIVIDER,
-  },
+  // {
+  //   label: "Transactions",
+  //   type: DropdownMenuItemType.BUTTON,
+  // },
+  // {
+  //   type: DropdownMenuItemType.DIVIDER,
+  // },
+  // {
+  //   type: DropdownMenuItemType.BUTTON,
+  //   disabled: true,
+  //   label: "Dashboard",
+  // },
+  // {
+  //   type: DropdownMenuItemType.BUTTON,
+  //   disabled: true,
+  //   label: "Portfolio",
+  // },
+  // {
+  //   label: "Profile",
+  //   href: "/profile",
+  // },
+  // {
+  //   type: DropdownMenuItemType.EXTERNAL_LINK,
+  //   href: "https://pancakeswap.finance",
+  //   label: "Link",
+  // },
+  // {
+  //   type: DropdownMenuItemType.DIVIDER,
+  // },
   {
     type: DropdownMenuItemType.BUTTON,
     onClick: noop,
@@ -133,7 +133,7 @@ export const userMenulinks: DropdownMenuItems[] = [
   },
 ];
 
-export const MENU_HEIGHT = 150;
+export const MENU_HEIGHT = 90;
 export const MENU_HEIGHT_MOBILE = 150;
 export const MENU_ENTRY_HEIGHT = 48;
 export const MOBILE_MENU_HEIGHT = 44;

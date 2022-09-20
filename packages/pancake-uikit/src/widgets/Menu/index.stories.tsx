@@ -44,7 +44,7 @@ const UserMenuComponent: React.FC<{ variant?: Variant; text?: string; account?: 
 }) => {
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   return (
-    <DropdownMenu items={userMenulinks} py="12px">
+    <DropdownMenu className="Bao" items={userMenulinks} py="12px">
       <UserMenu account={text || accountEllipsis} avatarSrc="" variant={variant} />
     </DropdownMenu>
   );
@@ -221,7 +221,7 @@ export const WithoutConnectButton: React.FC = () => {
   return (
     <BrowserRouter>
       <Menu
-        isDark={false}
+        isDark
         toggleTheme={noop}
         langs={langs}
         setLang={noop}
@@ -243,7 +243,7 @@ export const WithSubmenuSelected: React.FC = () => {
   return (
     <MemoryRouter initialEntries={["/teams"]}>
       <Menu
-        isDark={false}
+        isDark
         toggleTheme={noop}
         langs={langs}
         setLang={noop}

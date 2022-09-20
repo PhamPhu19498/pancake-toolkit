@@ -86,7 +86,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
       {/* <ModalHeader background={getThemeValue("colors.gradients.bubblegum")(theme)}> */}
       <CsModalHeader>
         <CsModalTitle>
-          <Heading>{t("Connect Wallet")}</Heading>
+          <Heading color="#494949">{t("Connect Wallet")}</Heading>
         </CsModalTitle>
         <ModalCloseButton onDismiss={onDismiss} />
       </CsModalHeader>

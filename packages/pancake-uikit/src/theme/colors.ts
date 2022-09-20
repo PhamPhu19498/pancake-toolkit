@@ -75,7 +75,7 @@ export const lightColors: Colors = {
   textDarkSecondary:"#40415C",
   bgCardProject:"#F8F8FF",
   textSecondary:"#868787",
-  textThird:"#011226",
+  textThird:"#FFF8E7",
   bgPaste:"#D8DAFB",
   containerInput:"#E8E9FA",
   backgroundListview:"#F8F8FF",
@@ -88,7 +88,7 @@ export const darkColors: Colors = {
   ...baseColors,
   ...additionalColors,
   secondary: "#49A2F2",
-  background: "#011226",
+  background: "#FFF8E7",
   backgroundDisabled: "#3c3742",
   backgroundAlt: "#101133",
   cardBorder: "#182636",
@@ -143,5 +143,5 @@ export const darkColors: Colors = {
   backgroundListview:"linear-gradient(180deg, rgba(81, 82, 102, 0.5) 24.4%, rgba(71, 71, 96, 0.5) 50%)",
   backgroundAcionList:"rgba(61, 62, 89, 0.02)",
   modalHeader:"#182636",
-  backgroundModal:" #011226"
+  backgroundModal:"FFF8E7"                           
 };

@@ -12,9 +12,11 @@ export const StyledUserMenu = styled(Flex)`
   cursor: pointer;
   display: inline-flex;
   height: 32px;
-  padding: 30px 45px;
+  width: 180px;
+  height: 50px;
   position: relative;
   border: 1px solid #494949;
+  justify-content: center;
 
   @media screen and (max-width: 600px) {
     padding: 0px;
@@ -44,8 +46,8 @@ export const LabelText = styled.div`
 `;
 
 const Menu = styled.div<{ isOpen: boolean }>`
-  background-color: ${({ theme }) => theme.card.background};
-  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  background-color: #FFF8E7;
+  /* border: 1px solid ${({ theme }) => theme.colors.cardBorder}; */
   border-radius: 16px;
   padding-bottom: 4px;
   padding-top: 4px;
