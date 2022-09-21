@@ -18,12 +18,12 @@ export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $i
   align-items: center;
   border: 0;
   background: ${({ theme }) => theme.colors.background};
-  background-color: #FFF8E7;
+  background-color: #fffce3;
+  box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px;
   /* color: ${({ theme, disabled, $isActive }) => getTextColor({ theme, disabled, $isActive })}; */
   color: #494949;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   font-weight: ${({ $isActive = false }) => ($isActive ? "600" : "400")};
-  box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px;
   display: flex;
   font-size: 16px;
   height: 48px;
@@ -68,9 +68,9 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
   border-radius: 16px;
   pointer-events: auto;
   width: ${({ $isBottomNav }) => ($isBottomNav ? "calc(100% - 32px)" : "220px")};
+  box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px !important;
   visibility: visible;
   z-index: 1001;
-  box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px !important;
 
   ${({ $isOpen }) =>
     !$isOpen &&
@@ -86,7 +86,7 @@ export const LinkStatus = styled(Text)<{ color: keyof Colors }>`
   padding: 0 8px;
   border: 2px solid;
   border-color: ${({ theme, color }) => theme.colors[color]};
-  box-shadow: none;
+  /* box-shadow: none; */
   color: ${({ theme, color }) => theme.colors[color]};
   margin-left: 8px;
 `;
