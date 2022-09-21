@@ -76,6 +76,7 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
     !$isOpen &&
     `
     pointer-events: none;
+    box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px !important;
     visibility: hidden;
   `}
 `;
