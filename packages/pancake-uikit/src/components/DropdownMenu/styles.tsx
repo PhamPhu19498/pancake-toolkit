@@ -23,6 +23,7 @@ export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $i
   color: #494949;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   font-weight: ${({ $isActive = false }) => ($isActive ? "600" : "400")};
+  box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px;
   display: flex;
   font-size: 16px;
   height: 48px;
@@ -69,7 +70,7 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
   width: ${({ $isBottomNav }) => ($isBottomNav ? "calc(100% - 32px)" : "220px")};
   visibility: visible;
   z-index: 1001;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px !important;
 
   ${({ $isOpen }) =>
     !$isOpen &&
