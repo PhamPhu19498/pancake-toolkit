@@ -18,6 +18,7 @@ import { MenuContext } from "./context";
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  background-color: #FFF8E7;
 `;
 
 const StyledNav = styled.nav<{ bgColorMenu: any, showMenuUp: boolean }>`

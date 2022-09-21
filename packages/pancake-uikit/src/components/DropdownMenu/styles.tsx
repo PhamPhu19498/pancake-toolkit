@@ -19,7 +19,7 @@ export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $i
   border: 0;
   background: ${({ theme }) => theme.colors.background};
   background-color: #fffce3;
-  box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px;
+  box-shadow: blue 0px 4px 0px -2px;
   /* color: ${({ theme, disabled, $isActive }) => getTextColor({ theme, disabled, $isActive })}; */
   color: #494949;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
@@ -68,7 +68,7 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
   border-radius: 16px;
   pointer-events: auto;
   width: ${({ $isBottomNav }) => ($isBottomNav ? "calc(100% - 32px)" : "220px")};
-  box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px !important;
+  box-shadow: blue 0px 4px 0px -2px;
   visibility: visible;
   z-index: 1001;
 
@@ -76,7 +76,6 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
     !$isOpen &&
     `
     pointer-events: none;
-    box-shadow: rgb(211 174 17 / 25%) 0px 4px 0px -2px, rgb(215 208 23 / 8%) 0px 0px 0px 1px !important;
     visibility: hidden;
   `}
 `;
