@@ -19,7 +19,7 @@ export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $i
   border: 0;
   background: ${({ theme }) => theme.colors.background};
   background-color: #fffce3;
-  box-shadow: blue 0px 4px 0px -2px;
+  box-shadow: blue;
   /* color: ${({ theme, disabled, $isActive }) => getTextColor({ theme, disabled, $isActive })}; */
   color: #494949;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
@@ -68,7 +68,7 @@ export const StyledDropdownMenu = styled.div<{ $isOpen: boolean; $isBottomNav: b
   border-radius: 16px;
   pointer-events: auto;
   width: ${({ $isBottomNav }) => ($isBottomNav ? "calc(100% - 32px)" : "220px")};
-  box-shadow: blue 0px 4px 0px -2px;
+  box-shadow: blue;
   visibility: visible;
   z-index: 1001;
 
