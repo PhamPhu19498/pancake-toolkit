@@ -64,11 +64,12 @@ const FixedContainer = styled.div<{ showMenu: boolean; height: number }>`
   z-index: 20;
 `;
 
-const TopBannerContainer = styled.div<{ height: number }>`
+const TopBannerContainer = styled.div<{ bgColorMenu: string, showMenuUp: boolean, height: number }>`
   height: ${({ height }) => `${height}px`};
   min-height: ${({ height }) => `${height}px`};
   max-height: ${({ height }) => `${height}px`};
   width: 100%;
+  background-color: ${({ bgColorMenu, showMenuUp }) => showMenuUp ? bgColorMenu : ""};
 `;
 
 const BodyWrapper = styled(Box)`
@@ -109,14 +110,34 @@ const Menu: React.FC<NavProps> = ({
   const [showMenu, setShowMenu] = useState(true);
   const [showMenuUp, setShowMenuUp] = useState(false);
   const refPrevOffset = useRef(typeof window === "undefined" ? 0 : window.pageYOffset);
+  const [topBannerSize, setTopBannerSize] = useState(TOP_BANNER_HEIGHT_MOBILE);
 
-  const topBannerHeight = isMobile ? TOP_BANNER_HEIGHT_MOBILE : TOP_BANNER_HEIGHT;
 
-  const totalTopMenuHeight = banner ? MENU_HEIGHT + topBannerHeight : MENU_HEIGHT;
+  // const topBannerHeight = windowSize <= 768 ? TOP_BANNER_HEIGHT_MOBILE : TOP_BANNER_HEIGHT;
+
+  // const topBannerHeight = windowSize <= 600 ? TOP_BANNER_HEIGHT_MOBILE : TOP_BANNER_HEIGHT;
+
+  const totalTopMenuHeight = banner ? MENU_HEIGHT + topBannerSize : MENU_HEIGHT;
+
 
   useEffect(() => {
       const handleResize = () => {
           setWindowSize(window.innerWidth)
+          if (window.innerWidth > 768) {
+            setTopBannerSize(160)
+          } 
+          if (window.innerWidth <= 768 && window.innerWidth > 680) {
+            setTopBannerSize(65)
+          } 
+          if (window.innerWidth <= 680 && window.innerWidth > 600) {
+            setTopBannerSize(100)
+          } 
+          else if (window.innerWidth <= 600) {
+            setTopBannerSize(120)
+          }
+
+            
+
       }
 
       window.addEventListener('resize', handleResize)
@@ -166,7 +187,7 @@ const Menu: React.FC<NavProps> = ({
     <MenuContext.Provider value={{ linkComponent }}>
       <Wrapper> 
         <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
-          {banner && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
+          {banner && <TopBannerContainer bgColorMenu="#FFF8E7" showMenuUp={showMenuUp} height={topBannerSize}>{banner}</TopBannerContainer>}
           <StyledNav bgColorMenu="#FFF8E7" showMenuUp={showMenuUp}>
             <Flex>
               <Logo isDark={isDark} href={homeLink?.href ?? "/"} linkImages={linkImages}/>
