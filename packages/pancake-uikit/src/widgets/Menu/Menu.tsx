@@ -106,11 +106,26 @@ const Menu: React.FC<NavProps> = ({
   bgColorMenu
 }) => {
   const { isMobile } = useMatchBreakpoints();
+  let TOP_BANNER = TOP_BANNER_HEIGHT_MOBILE;
+
+  if (window.innerWidth > 768) {
+   TOP_BANNER = 160
+  } 
+  if (window.innerWidth <= 768 && window.innerWidth > 680) {
+    TOP_BANNER = 65
+  } 
+  if (window.innerWidth <= 680 && window.innerWidth > 600) {
+    TOP_BANNER = 100
+  } 
+  else if (window.innerWidth <= 600) {
+    TOP_BANNER = 120
+  }
+  const [topBannerSize, setTopBannerSize] = useState(TOP_BANNER);
   const [windowSize, setWindowSize] = useState(window.innerWidth)
+  
   const [showMenu, setShowMenu] = useState(true);
   const [showMenuUp, setShowMenuUp] = useState(false);
   const refPrevOffset = useRef(typeof window === "undefined" ? 0 : window.pageYOffset);
-  const [topBannerSize, setTopBannerSize] = useState(TOP_BANNER_HEIGHT_MOBILE);
 
 
   // const topBannerHeight = windowSize <= 768 ? TOP_BANNER_HEIGHT_MOBILE : TOP_BANNER_HEIGHT;
@@ -135,9 +150,6 @@ const Menu: React.FC<NavProps> = ({
           else if (window.innerWidth <= 600) {
             setTopBannerSize(120)
           }
-
-            
-
       }
 
       window.addEventListener('resize', handleResize)
