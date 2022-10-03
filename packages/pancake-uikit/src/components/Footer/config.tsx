@@ -79,22 +79,17 @@ export const socials = [
   {
     label: "Facebook",
     icon: "Facebook",
-    href: "https://www.facebook.com/Runtogether.official",
+    href: "https://www.facebook.com/DeltaLabsJSC",
   },
   {
     label: "Twitter",
     icon: "Twitter",
-    href: "https://twitter.com/RunTogether_Nft",
-  },
-  {
-    label: "Telegram",
-    icon: "Telegram",
-    href: "https://t.me/Runtogethergroup",
+    href: "https://twitter.com/DeltaLabsJSC",
   },
   {
     label: "Globe",
     icon: "Globe",
-    href: "https://runtogether.net/",
+    href: "https://deltalabsjsc.com/",
   },
   // {
   //   label: "GitLab",
@@ -115,20 +110,24 @@ export const socials = [
 ];
 export const MoreInformation = [
   {
-    label: "Whitepaper",
-    href: "https://whitepaper.runtogether.net/about-run-together/general",
+    label: "Delta Labs",
+    href: "https://deltalabsjsc.com/",
   },
   {
-    label: "Pitchdeck",
-    href: "https://runtogether.net/wp-content/uploads/2022/08/Pitchdeck-Run-Together-Eng.pdf",
+    label: "Runtogether",
+    href: "https://runtogether.net/",
   },
   {
-    label: "Smart Contract",
-    href: "https://bscscan.com/address/0xc643E83587818202E0fFf5eD96D10Abbc8Bb48e7",
+    label: "Hesman",
+    href: "https://hesman.net/",
   },
   {
-    label: "Audits",
-    href: "https://github.com/verichains/public-audit-reports/blob/main/Verichains%20Public%20Audit%20Report%20-%20RunTogether%20Token%20v2%20-%20v1.0.pdf",
+    label: "Livetrade",
+    href: "https://livetrade.vn/",
+  },
+  {
+    label: "Bami",
+    href: "https://bami.money/",
   },
 ]
 

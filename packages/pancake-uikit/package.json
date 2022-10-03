@@ -1,6 +1,6 @@
 {
-  "name": "@phamphu19498/runtogether-uikit",
-  "version": "2.2.25",
+  "name": "@thaihuuluong/dogwatcher-uikit",
+  "version": "1.0.2",
   "description": "Set of UI components for pancake projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

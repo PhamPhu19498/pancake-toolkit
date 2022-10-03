@@ -49,7 +49,7 @@ const MenuItem: React.FC<FooterProps> = ({
 
           <ContainerContact flexDirection="column">
             <HeadTitle>Contact</HeadTitle>
-            <CsTextEmail>hello@runtogether.net</CsTextEmail>
+            <CsTextEmail>info@deltalabsjsc.com</CsTextEmail>
           </ContainerContact>
 
           <ContainerContact flexDirection="column">
