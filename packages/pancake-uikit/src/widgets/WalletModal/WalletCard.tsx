@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useMatchBreakpoints } from "../../hooks";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import MoreHorizontal from "../../components/Svg/Icons/MoreHorizontal";
@@ -48,6 +49,7 @@ const WalletButtonShowMore = styled(WalletButton)`
   }
 `;
 
+declare var window: any
 
 interface MoreWalletCardProps extends ButtonProps {
   t: (key: string) => string;
@@ -64,7 +66,7 @@ export const MoreWalletCard: React.FC<MoreWalletCardProps> = ({ t, ...props }) =
 
 const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss }) => {
   const { title, icon: Icon } = walletConfig;
-
+  const { isDesktop } = useMatchBreakpoints()
   return (
     <WalletButton
       variant="tertiary"
@@ -77,10 +79,21 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss }) => {
         } else {
           login(walletConfig.connectorId);
         }
-
+        if (title === "Rice Wallet" && walletConfig && isDesktop) {
+          login(walletConfig.connectorId);
+          localStorage?.setItem(walletLocalStorageKey, walletConfig.title);
+          localStorage?.setItem(connectorLocalStorageKey, walletConfig.connectorId);
+          onDismiss();
+          return;
+        }
+        // rice connect by deep link for mobile
+        if (!window.ethereum && walletConfig.href && title === "Rice Wallet") {
+          window.open(walletConfig.href, "_blank", "noopener noreferrer");
+        }
         localStorage.setItem(walletLocalStorageKey, walletConfig.title);
         localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
         onDismiss();
+        
       }}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
