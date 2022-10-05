@@ -5,11 +5,20 @@ import MathWallet from "../../components/Svg/Icons/MathWallet";
 import TokenPocket from "../../components/Svg/Icons/TokenPocket";
 import BinanceChain from "../../components/Svg/Icons/BinanceChain";
 import SafePal from "../../components/Svg/Icons/SafePal";
-import Coin98 from "../../components/Svg/Icons/Coin98";
+import Coin98 from "../../components/Svg/Icons/Coin98"; 
+import IconLogoRice from "../../components/Svg/Icons/RiceIcon";
+import { useMatchBreakpoints } from "../../hooks";
 
 import { Config, ConnectorNames } from "./types";
 
+
 const connectors: Config[] = [
+  {
+    title: "Rice Wallet",
+    icon: IconLogoRice,
+    connectorId: window.innerWidth < 600 ? ConnectorNames.Injected : ConnectorNames.WalletConnect,
+    priority: 1,
+  },
   {
     title: "Metamask",
     icon: Metamask,
@@ -58,7 +67,7 @@ const connectors: Config[] = [
     icon: Coin98,
     connectorId: ConnectorNames.Injected,
     priority: 999,
-  },
+  }
 ];
 
 export default connectors;
