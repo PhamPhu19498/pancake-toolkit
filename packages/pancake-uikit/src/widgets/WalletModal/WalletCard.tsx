@@ -79,13 +79,6 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss }) => {
         } else {
           login(walletConfig.connectorId);
         }
-        if (title === "Rice Wallet" && walletConfig && isDesktop) {
-          login(walletConfig.connectorId);
-          localStorage?.setItem(walletLocalStorageKey, walletConfig.title);
-          localStorage?.setItem(connectorLocalStorageKey, walletConfig.connectorId);
-          onDismiss();
-          return;
-        }
         // rice connect by deep link for mobile
         if (!window.ethereum && walletConfig.href && title === "Rice Wallet") {
           window.open(walletConfig.href, "_blank", "noopener noreferrer");
