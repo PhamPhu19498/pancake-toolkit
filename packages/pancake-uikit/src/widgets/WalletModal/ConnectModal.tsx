@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import styled, { useTheme } from "styled-components";
-import getExternalLinkProps from "../../util/getExternalLinkProps";
-import Grid from "../../components/Box/Grid";
 import Box from "../../components/Box/Box";
-import getThemeValue from "../../util/getThemeValue";
-import Text from "../../components/Text/Text";
+import Grid from "../../components/Box/Grid";
 import Heading from "../../components/Heading/Heading";
-import { Button } from "../../components/Button";
 import { ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalTitle } from "../Modal";
-import WalletCard, { MoreWalletCard } from "./WalletCard";
 import config, { walletLocalStorageKey } from "./config";
 import { Config, Login } from "./types";
+import WalletCard, { MoreWalletCard } from "./WalletCard";
 
 interface Props {
   login: Login;
@@ -24,7 +20,6 @@ const WalletWrapper = styled(Box)`
 `;
 
 const CsModalContainer = styled(ModalContainer)`
-  /* background: url('https://static.vecteezy.com/system/resources/previews/003/619/016/original/abstract-purple-violet-frame-or-border-watercolor-texture-in-white-background-free-vector.jpg'); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: 100%;
@@ -101,20 +96,6 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
             {!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}
           </CsGrid>
         </WalletWrapper>
-        {/* <Box p="24px">
-          <Text textAlign="center" color="textSubtle" as="p" mb="16px">
-            {t("Haven’t got a crypto wallet yet?")}
-          </Text>
-          <Button
-            as="a"
-            href="https://docs.pancakeswap.finance/get-started/connection-guide"
-            variant="subtle"
-            width="100%"
-            {...getExternalLinkProps()}
-          >
-            {t("Learn How to Connect")}
-          </Button>
-        </Box> */}
       </ModalBody>
     </CsModalContainer>
   );
