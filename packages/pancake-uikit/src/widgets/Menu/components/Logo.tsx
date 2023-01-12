@@ -60,7 +60,6 @@ const Logo: React.FC<Props> = ({ isDark, href, linkImages }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-    
       <Img src={linkImages} alt="logo-pibridge"/>
     </>
   );

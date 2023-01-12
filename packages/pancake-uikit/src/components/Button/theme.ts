@@ -18,23 +18,29 @@ export const scaleVariants = {
 
 export const styleVariants = {
   [variants.PRIMARY]: {
-    backgroundColor: "primaryBright",
-    color: "white",
+    backgroundColor: "transparent",
+    color: "text",
+    borderColor: "cardBorder",
+    border: "1px solid",
   },
   [variants.SECONDARY]: {
     backgroundColor: "transparent",
     border: "2px solid",
-    borderColor: "primaryBright",
+    borderColor: "text", 
     boxShadow: "none",
-    color: "primaryBright",
+    color: "text",
     ":disabled": {
-      backgroundColor: "transparent",
+      backgroundColor: "text",
+    },
+    ":hover": {
+      backgroundColor: "text",
+      color:"background",
     },
   },
   [variants.TERTIARY]: {
     backgroundColor: "tertiary",
     boxShadow: "none",
-    color: "primaryBright",
+    color: "text",
   },
   [variants.SUBTLE]: {
     backgroundColor: "textSubtle",
@@ -50,7 +56,7 @@ export const styleVariants = {
   },
   [variants.TEXT]: {
     backgroundColor: "transparent",
-    color: "primaryBright",
+    color: "text",
     boxShadow: "none",
   },
   [variants.LIGHT]: {

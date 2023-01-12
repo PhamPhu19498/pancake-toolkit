@@ -46,7 +46,6 @@ const StyledNav = styled.nav<{ bgColorMenu: any, showMenuUp: boolean }>`
 
   @media screen and (max-width: 600px) {
     padding: 0px 30px;
-    /* height: ${MENU_HEIGHT_MOBILE}px; */
   }
 
   @media screen and (max-width: 350px) {
