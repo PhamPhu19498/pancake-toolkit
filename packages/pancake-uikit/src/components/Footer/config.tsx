@@ -84,17 +84,17 @@ export const socials = [
   {
     label: "Facebook",
     icon: "Facebook",
-    href: "https://www.facebook.com/livetrade.io",
+    href: "https://www.facebook.com/livetradeglobal",
   },
   {
     label: "Twitter",
     icon: "Twitter",
-    href: "https://twitter.com/Livetrade_io",
+    href: "https://twitter.com/livetradeglobal",
   },
   {
     label: "Telegram",
     icon: "Telegram",
-    href: "https://t.me/LiveTradeLTD",
+    href: "https://t.me/LiveTrade_chat",
   },
   // {
   //   label: "GitLab",
